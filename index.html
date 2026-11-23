@@ -3,16 +3,16 @@
 <style>
 :root{--ink:#20304b;--sub:#61718c;--blue:#3267d7;--light:#edf3ff;--edge:#dae3f2;--green:#187c55;--gold:#f7b84e;--bg:#f5f7ff}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:var(--ink);-webkit-tap-highlight-color:transparent}button,input,select{font:inherit}button{cursor:pointer;touch-action:manipulation}button:disabled{cursor:default;opacity:.45}.wrap{max-width:850px;margin:auto;padding:12px 14px 50px}header{background:#fff;border-bottom:1px solid var(--edge);position:sticky;top:0;z-index:5}header .top{max-width:850px;margin:auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px}.logo{font-size:19px;font-weight:850}.version{font-size:12px;color:var(--sub)}.card{background:white;border:1px solid var(--edge);border-radius:20px;padding:18px;margin:12px 0;box-shadow:0 3px 14px #29395709}.headrow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.tag{font-size:13px;color:var(--blue);background:var(--light);padding:6px 10px;border-radius:99px;font-weight:750}h1{font-size:24px;margin:4px 0 8px}h2{font-size:19px;margin:2px 0 12px}p{line-height:1.75;margin:8px 0;color:var(--sub)}.bigbtn{padding:15px 17px;border:0;background:var(--blue);color:#fff;border-radius:14px;font-weight:800;min-height:52px;font-size:17px}.ghost{background:white;color:var(--ink);border:1.5px solid var(--edge)}.soft{background:var(--light);color:var(--blue)}.actions{display:flex;gap:9px;flex-wrap:wrap}.actions button{flex:1;min-width:115px}.levels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.level{border:1.5px solid var(--edge);background:white;border-radius:16px;text-align:left;padding:16px;min-height:108px}.level.selected{border:2px solid var(--blue);background:var(--light)}.level strong{display:block;font-size:17px;margin-bottom:8px}.level small{color:var(--sub);font-size:13px;line-height:1.6}.board{display:flex;flex-direction:column;align-items:center;gap:4px;background:#f9fbff;border:1px solid var(--edge);border-radius:18px;padding:18px 12px;margin:15px 0}.placeheads{display:grid;grid-template-columns:56px 68px 68px;align-items:center;text-align:center;font-size:14px;font-weight:700;color:var(--sub)}.line{display:grid;grid-template-columns:56px 68px 68px;align-items:center;text-align:center}.digit{font-size:43px;font-weight:800;font-variant-numeric:tabular-nums;border-radius:10px;min-height:55px;display:flex;align-items:center;justify-content:center}.op{font-size:34px}.focus{background:#dceaff;color:#1757c8;outline:2px solid #84adfb}.mutedDigit{color:#8490a5}.carryline{height:36px}.carrylabel{font-size:12px;color:#2057ab;font-weight:800;margin-top:3px}.carry.chip{background:#d9e9ff;border:2px solid #69a3fc;border-radius:9px;min-width:39px;min-height:32px;font-size:23px;box-shadow:0 1px 3px #164da322}.carry-note{font-size:15px;font-weight:750;color:#2057ab;text-align:center;margin:4px 0 2px;max-width:290px;line-height:1.5}.carry{color:#165bbf;font-size:22px;font-weight:850;display:flex;align-items:center;justify-content:center}.cross{text-decoration:line-through;color:#a0a8b6}.underline{width:194px;border-bottom:3px solid #3f4d66;margin:2px 0 3px 40px}.result{color:var(--green);min-height:55px}.answerblank{color:#b4c1d4}.teacher{display:flex;align-items:flex-start;gap:12px;background:#eaf2ff;border-radius:16px;padding:17px;margin:14px 0}.face{font-size:28px}.say{font-size:18px;line-height:1.75;font-weight:650;white-space:pre-line}.say small{font-size:14px;font-weight:500;color:var(--sub)}.progress{display:flex;gap:5px;margin:12px 0}.progress>span{flex:1;background:#e5eaf3;height:8px;border-radius:20px}.progress>span.on{background:var(--blue)}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.choice{min-height:65px;background:white;border:2px solid #d5e0f1;border-radius:15px;font-size:26px;font-weight:850;color:var(--ink)}.choice:active{background:#edf3ff}.mini{font-size:13px;color:var(--sub)}.good{display:block;background:#e5f7eb;color:#146f44;padding:12px;border-radius:12px;font-weight:700}.warning{display:block;background:#fff6e2;color:#885d12;padding:12px;border-radius:12px}.hidden{display:none!important}.modeBar{display:flex;gap:8px}.modeBar button{flex:1;border:1.5px solid var(--edge);background:#fff;padding:13px;border-radius:12px;font-weight:800;color:var(--ink)}.lessonModes{margin:14px 0 4px}.lessonModes button{min-height:56px;font-size:17px}.modeBar button.active{background:var(--light);border-color:var(--blue);color:var(--blue)}.settingrow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid #edf0f6}.settingrow:last-child{border:0}select{padding:8px;background:white;border:1px solid var(--edge);border-radius:10px;max-width:160px}input[type=checkbox]{width:23px;height:23px;accent-color:var(--blue)}.guideTools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:12px 0}.guideTools button{flex:1;min-width:180px}.guideTools label{font-size:14px;font-weight:750;display:flex;align-items:center;gap:6px}.guideTools select{max-width:170px}.guideStatus{font-size:13px;color:#295fb8;font-weight:700}.helpbuttons{display:flex;gap:8px;flex-wrap:wrap}.helpbuttons button{border:1px solid #b9d0f9;background:#fff;border-radius:14px;padding:12px;font-weight:700;color:#2657aa}.notice{font-size:13px;color:var(--sub);line-height:1.65}.stats{display:flex;gap:10px}.stats>div{flex:1;background:#f3f7ff;border-radius:13px;text-align:center;padding:13px}.stats strong{display:block;font-size:22px}.stats small{color:var(--sub)}.tabs{display:flex;gap:6px}.tabs button{border:0;background:transparent;color:var(--sub);border-radius:10px;padding:10px;font-weight:750}.tabs .active{background:var(--light);color:var(--blue)}.numberbox{display:flex;align-items:center;justify-content:center;gap:10px}.numberbox input{font-size:25px;max-width:105px;border:2px solid var(--edge);border-radius:12px;text-align:center;padding:9px}.numberbox select{font-size:23px}footer{text-align:center;color:var(--sub);font-size:12px;padding:18px}@media(max-width:400px){.wrap{padding:10px}.card{padding:14px}.say{font-size:17px}.digit{font-size:39px}.level{padding:11px;min-height:105px}.level strong{font-size:15px}.logo{font-size:17px}}
 </style></head><body>
-<header><div class="top"><div><span class="logo">📘 수학선생님</span> <span class="version">V2.2</span></div><div class="tabs"><button id="tabStudy" class="active" onclick="switchPage('study')">공부</button><button id="tabRecord" onclick="switchPage('record')">기록</button><button id="tabSettings" onclick="switchPage('settings')">설정</button></div></div></header>
+<header><div class="top"><div><span class="logo">📘 수학선생님</span> <span class="version">V2.3</span></div><div class="tabs"><button id="tabStudy" class="active" onclick="switchPage('study')">공부</button><button id="tabRecord" onclick="switchPage('record')">기록</button><button id="tabSettings" onclick="switchPage('settings')">설정</button></div></div></header>
 <main class="wrap">
 <section id="pageStudy">
 <div class="card" id="welcome"><div class="headrow"><h1>천천히, 순서대로 배우자! 🌷</h1><span class="tag">한 자리부터 두 자리까지</span></div><p>한 자리와 두 자리 계산을 차근차근 배워요. 오늘은 계산을 빨리 하기보다 <b>어디부터 어떻게 계산하는지</b> 알아볼 거예요. 잘 모르면 언제든 다시 들을 수 있어요.</p></div>
 <div class="card" id="course"><h2>무엇을 배울까요?</h2><div class="levels" id="levels"></div><div style="height:12px"></div><div class="actions"><button class="bigbtn" onclick="startCurrent()" id="startButton">학습 시작 ▶</button></div></div>
-<div class="card hidden" id="lesson"><div class="headrow"><h2 id="lessonTitle"></h2><span class="tag" id="lessonCounter"></span></div><div class="modeBar lessonModes" role="group" aria-label="현재 문제 학습 방식"><button id="modeLearn" onclick="setMode('learn')" aria-pressed="false">📖 선생님 설명</button><button class="active" id="modePractice" onclick="setMode('practice')" aria-pressed="true">✏️ 함께 풀기</button></div><p class="mini" id="modeDescription" style="margin:9px 0 2px"></p><div class="guideTools hidden" id="guideTools"><button class="bigbtn soft" id="guideButton" onclick="toggleGuided()">▶ 처음부터 연속 설명 듣기</button><label>설명 사이 간격 <select id="pauseSelect" onchange="changePause()"><option value="1">보통</option><option value="1.4">천천히 (추천)</option><option value="2">아주 천천히</option></select></label><span class="guideStatus" id="guideStatus"></span></div><div class="progress" id="stepProgress"></div><div class="board" id="board"></div><div class="teacher"><div class="face">👩‍🏫</div><div class="say" id="teacherText" aria-live="polite"></div></div><div id="questionArea" class="hidden"><h2 id="questionTitle">어떤 숫자를 적을까요?</h2><div class="choices" id="choices"></div><p id="feedback" aria-live="polite"></p></div><div class="helpbuttons"><button onclick="speakCurrent()">🔊 설명 듣기</button><button onclick="stopVoice()">■ 멈추기</button><button onclick="showHelp()">💡 다시 설명해줘</button></div><div class="actions" style="margin-top:13px"><button class="bigbtn ghost" onclick="previousStep()" id="prevButton">← 이전</button><button class="bigbtn" onclick="nextStep()" id="nextButton">다음 설명 →</button></div><div class="actions" style="margin-top:9px"><button class="bigbtn ghost" onclick="backToCourses()">다른 단계 선택</button><button class="bigbtn soft" onclick="anotherExample()">비슷한 문제</button></div><p class="notice">매 문제 위쪽에서 학습 방식을 바꿀 수 있어요. 바꾸면 <b>같은 문제의 첫 단계</b>부터 다시 시작해요. 새 문제는 ‘함께 풀기’로 시작합니다. 「함께 풀기」에서는 아이가 답을 고르기 전에 결과를 말하지 않습니다. 정답 선택 후 자세한 풀이가 나옵니다. 세 번 틀리면 풀이를 함께 확인합니다. 「선생님 설명」에서는 처음부터 풀이와 답을 보여줍니다. 음성은 기기의 한국어 음성 합성 기능을 사용합니다. 문장을 짧게 나누고 충분히 쉬며, 마지막에는 계산 순서 → 답 → 순서 복습으로 설명합니다. 처음 설명을 들을 때만 단계 번호를 안내하고 잠시 쉬었다가 풀이를 설명해요. 다시 들으면 단계 번호를 반복하지 않아요. 선생님 설명에서 ‘처음부터 연속 설명 듣기’를 누르면 음성 설명과 화면이 함께 다음 단계로 넘어갑니다. 연속 설명이 소리 없이 멈추면 화면에 오류를 안내합니다. 충분히 쉬면서 숫자를 적고 다음 단계로 이동합니다. 함께 풀기에서는 아이가 직접 답을 고릅니다.</p></div>
+<div class="card hidden" id="lesson"><div class="headrow"><h2 id="lessonTitle"></h2><span class="tag" id="lessonCounter"></span></div><div class="modeBar lessonModes" role="group" aria-label="현재 문제 학습 방식"><button id="modeLearn" onclick="setMode('learn')" aria-pressed="false">📖 선생님 설명</button><button class="active" id="modePractice" onclick="setMode('practice')" aria-pressed="true">✏️ 함께 풀기</button></div><p class="mini" id="modeDescription" style="margin:9px 0 2px"></p><div class="guideTools hidden" id="guideTools"><button class="bigbtn soft" id="guideButton" onclick="toggleGuided()">▶ 처음부터 연속 설명 듣기</button><label>설명 사이 간격 <select id="pauseSelect" onchange="changePause()"><option value="1">보통</option><option value="1.4">천천히 (추천)</option><option value="2">아주 천천히</option></select></label><span class="guideStatus" id="guideStatus"></span></div><div class="progress" id="stepProgress"></div><div class="board" id="board"></div><div class="teacher"><div class="face">👩‍🏫</div><div class="say" id="teacherText" aria-live="polite"></div></div><div id="questionArea" class="hidden"><h2 id="questionTitle">어떤 숫자를 적을까요?</h2><div class="choices" id="choices"></div><p id="feedback" aria-live="polite"></p></div><div class="helpbuttons"><button onclick="speakCurrent()">🔊 설명 듣기</button><button onclick="stopVoice()">■ 멈추기</button><button onclick="showHelp()">💡 다시 설명해줘</button></div><div class="actions" style="margin-top:13px"><button class="bigbtn ghost" onclick="previousStep()" id="prevButton">← 이전</button><button class="bigbtn" onclick="nextStep()" id="nextButton">다음 설명 →</button></div><div class="actions" style="margin-top:9px"><button class="bigbtn ghost" onclick="backToCourses()">다른 단계 선택</button><button class="bigbtn soft" onclick="anotherExample()">비슷한 문제</button></div><p class="notice">매 문제 위쪽에서 학습 방식을 바꿀 수 있어요. 바꾸면 <b>같은 문제의 첫 단계</b>부터 다시 시작해요. 새 문제는 ‘함께 풀기’로 시작합니다. 「함께 풀기」에서는 아이가 답을 고르기 전에 결과를 말하지 않습니다. 정답 선택 후 자세한 풀이가 나옵니다. 세 번 틀리면 풀이를 함께 확인합니다. 「선생님 설명」에서는 처음부터 풀이와 답을 보여줍니다. 음성은 기기의 한국어 음성 합성 기능을 사용합니다. 긴 문장을 짧게 나누고 쉼표와 마침표에서 충분히 쉬며, 마지막에는 계산 순서 → 답 → 순서 복습으로 설명합니다. 처음 설명을 들을 때만 단계 번호를 안내하고 잠시 쉬었다가 풀이를 설명해요. 다시 들으면 단계 번호를 반복하지 않아요. 선생님 설명에서 ‘처음부터 연속 설명 듣기’를 누르면 음성 설명과 화면이 함께 다음 단계로 넘어갑니다. 연속 설명이 멈추면 화면에 오류를 안내합니다. 충분히 쉬면서 숫자를 적고 다음 단계로 이동합니다. 함께 풀기에서는 아이가 직접 답을 고릅니다.</p></div>
 </section>
 <section id="pageRecord" class="hidden"><div class="card"><h1>🌱 나의 학습 기록</h1><p>다른 친구와 비교하지 않고, 어제의 나보다 조금씩 익숙해지는 것을 목표로 해요.</p><div class="stats"><div><strong id="statLessons">0</strong><small>설명 완료</small></div><div><strong id="statSolved">0</strong><small>혼자 성공</small></div><div><strong id="statAttempts">0</strong><small>연습 문제</small></div></div><h2 style="margin-top:22px">최근 학습</h2><div id="history"></div><button class="bigbtn ghost" onclick="switchPage('study')">공부하러 가기</button></div></section>
 <section id="pageSettings" class="hidden"><div class="card"><h1>⚙️ 선생님 설정</h1><div class="settingrow"><label for="voiceAuto">단계가 바뀌면 자동으로 설명하기</label><input type="checkbox" id="voiceAuto" onchange="updateSettings()"></div><div class="settingrow"><label for="voiceRate">말하기 속도</label><select id="voiceRate" onchange="updateSettings()"><option value="0.7">아주 천천히</option><option value="0.83">천천히 (추천)</option><option value="1">보통</option></select></div><div class="settingrow"><label for="voiceSelect">한국어 음성</label><select id="voiceSelect" onchange="updateSettings()"><option value="">기기 기본 음성</option></select></div><div class="settingrow"><label for="soundOn">음성 기능 사용</label><input type="checkbox" id="soundOn" onchange="updateSettings()"></div><div class="actions" style="margin-top:12px"><button class="bigbtn soft" onclick="testVoice()">🔊 목소리 시험</button></div><p class="notice">매 문제 위쪽에서 학습 방식을 바꿀 수 있어요. 바꾸면 <b>같은 문제의 첫 단계</b>부터 다시 시작해요. 새 문제는 ‘함께 풀기’로 시작합니다. iPad·iPhone에서 소리가 들리지 않으면, 기기 볼륨을 확인하고 먼저 '목소리 시험'을 눌러 주세요. 브라우저와 기기 설정에 따라 한국어 음성 목록이 다를 수 있어요. 오프라인에서도 브라우저에 설치된 음성은 사용할 수 있습니다.</p></div><div class="card"><h2>학습 기록 관리</h2><p class="notice">매 문제 위쪽에서 학습 방식을 바꿀 수 있어요. 바꾸면 <b>같은 문제의 첫 단계</b>부터 다시 시작해요. 새 문제는 ‘함께 풀기’로 시작합니다. 학습 기록은 이 기기의 브라우저에만 보관됩니다. 브라우저 데이터를 지우면 기록이 없어질 수 있습니다.</p><button class="bigbtn ghost" onclick="exportData()">기록 백업 파일 저장</button><button class="bigbtn ghost" onclick="document.getElementById('importFile').click()">백업 기록 가져오기</button><input type="file" id="importFile" accept="application/json,.json" class="hidden" onchange="importData(event)"><button class="bigbtn ghost" onclick="resetData()" style="margin-top:10px">기록 초기화</button></div></section>
-<footer>수학선생님 · V2.2 · 설치 없이 사용하는 독립 웹앱</footer></main>
+<footer>수학선생님 · V2.3 · 설치 없이 사용하는 독립 웹앱</footer></main>
 <script>
 'use strict';
 const KEY='math-teacher-v1', LEVELS=[
@@ -47,7 +47,7 @@ return [
 {title:'② 오른쪽부터 시작해요',text:'먼저 오른쪽 일의 자리부터 계산해요. 왼쪽 십의 자리는 아직 계산하지 않아요.',focus:'ones',ask:{prompt:'어느 자리부터 계산할까요?',opts:['십의 자리','일의 자리','아무 자리'],answerIndex:1,hint:'세로셈은 오른쪽에 있는 일의 자리부터 시작해요.'}},
 {title:'③ 일의 자리를 더해요',text:`일의 자리인 ${attachNumber(at,'과','와')} ${attachNumber(bt,'을','를')} 더해요. ${at} 더하기 ${attachNumber(bt,'은','는')} ${sum}이지요? ${sum<10?`일의 자리 아래에 ${attachNumber(sum,'을','를')} 적어요.`:'십 하나와 남은 낱개를 나누어 적어 볼 거예요.'}`,focus:'ones',showOnes:sum<10,ask:{prompt:`${at} + ${bt} = ?`,opts:makeOptions(sum),answer:sum,hint:`${at}에서 ${bt}만큼 더해 볼까요? 답은 ${sum}이에요.`}},
 ...(carry?[{title:'④ 새로 생긴 십 하나를 위에 적어요',text:`아까 ${at} 더하기 ${attachNumber(bt,'은','는')} ${sum}이었지요? ${sum}은 십 하나와 일 ${sum%10}개예요. 일의 자리 아래에 ${attachNumber(sum%10,'을','를')} 적어요. 십의 자리 위에 작은 1을 적어요. 이 작은 1은 새로 생긴 십 하나예요.`,focus:'ones',showOnes:true,showCarry:true,ask:{prompt:'일의 자리 아래에 적을 숫자는?',opts:makeOptions(sum%10),answer:sum%10,hint:`${sum}은 십 하나와 일 몇 개로 나눌 수 있을까? 십 하나는 위의 파란 1로 적어 두었어.`}}]:[]),
-{title:carry?'⑤ 위에 적은 1도 함께 더해요':'④ 십의 자리를 더해요',text:carry?`이제 십의 자리를 계산해요. 원래 십의 자리 ${ah}와 ${attachNumber(bh,'뿐 아니라','뿐 아니라')}, 일의 자리에서 새로 생겨 위에 적은 작은 1도 더해야 해요. ${ah} 더하기 ${bh} 더하기 1은 ${attachNumber(ah+bh+1,'이에요','예요')}. 십의 자리 아래에 ${attachNumber(ah+bh+1,'을','를')} 적어요.`:`이제 십의 자리를 계산해요. ${bh===0?`십의 자리의 ${attachNumber(ah,'은','는')} 그대로 내려 적어요.`:ah===0?`십의 자리의 ${attachNumber(bh,'을','를')} 그대로 내려 적어요.`:`${ah} 더하기 ${attachNumber(bh,'은','는')} ${attachNumber(ah+bh,'이에요','예요')}.`} ${ah+bh>0?`십의 자리 아래에 ${attachNumber(ah+bh,'을','를')} 적어요.`:'십의 자리에는 적을 숫자가 없어요.'}`,focus:'tens',showOnes:true,showCarry:!!carry,showTens:true,ask:{prompt:'십의 자리 아래에 적을 숫자는?',opts:makeOptions(ah+bh+carry),answer:ah+bh+carry,hint:carry?`십의 자리에서 원래 있던 ${ah}와 ${bh}에, 파란색 작은 1까지 함께 더해 봐.`:`십의 자리 숫자 ${ah}와 ${bh}를 더해 봐.`}},
+{title:carry?'⑤ 위에 적은 1도 함께 더해요':'④ 십의 자리를 더해요',text:carry?`이제 십의 자리를 계산해요. 원래 십의 자리의 ${ah}와 ${bh}를 더해요. 여기에 일의 자리에서 받아올림한 작은 1도 더해야 해요. ${ah} 더하기 ${bh} 더하기 1은 ${attachNumber(ah+bh+1,'이에요','예요')}. 십의 자리 아래에 ${attachNumber(ah+bh+1,'을','를')} 적어요.`:`이제 십의 자리를 계산해요. ${bh===0?`십의 자리의 ${attachNumber(ah,'은','는')} 그대로 내려 적어요.`:ah===0?`십의 자리의 ${attachNumber(bh,'을','를')} 그대로 내려 적어요.`:`${ah} 더하기 ${attachNumber(bh,'은','는')} ${attachNumber(ah+bh,'이에요','예요')}.`} ${ah+bh>0?`십의 자리 아래에 ${attachNumber(ah+bh,'을','를')} 적어요.`:'십의 자리에는 적을 숫자가 없어요.'}`,focus:'tens',showOnes:true,showCarry:!!carry,showTens:true,ask:{prompt:'십의 자리 아래에 적을 숫자는?',opts:makeOptions(ah+bh+carry),answer:ah+bh+carry,hint:carry?`십의 자리에서 원래 있던 ${ah}와 ${bh}에, 파란색 작은 1까지 함께 더해 봐.`:`십의 자리 숫자 ${ah}와 ${bh}를 더해 봐.`}},
 {title:'완성! 다시 확인해요',text:addSummary(a,b,at,bt,ah,bh,sum,carry,result),focus:'none',showOnes:true,showCarry:!!carry,showTens:true,complete:true}
 ]}
 const borrow=at<bt,diff=borrow?at+10-bt:at-bt,tens=ah-bh-(borrow?1:0);
@@ -357,86 +357,103 @@ function guidedRevealForPhrase(phrase){
  const [a,b]=LEVELS[level].examples[exampleIndex];
  el('board').innerHTML=drawBoard({...d,showOnes:visualReveal.ones,showCarry:visualReveal.carry,showTens:visualReveal.tens},a,b,LEVELS[level]);
 }
-// iPad Safari: speech must be requested *directly in the button's tap handler*.
-// V2.1 called cancel() twice immediately before speak(), then chained tiny
-// utterances; on iOS this can leave synthesis silent even though step speech works.
-// V2.2 starts one natural utterance per lesson step, without a preceding idle cancel.
-// Only an actual speech-end event may move the lesson forward.
+// V2.3: Guided speech uses short, meaning-based utterances. Unlike a single long
+// utterance, a comma cannot swallow the pause, and board digits can appear
+// immediately after the specific spoken instruction. All scheduling is guarded
+// by guidedToken so stopping or switching a lesson cannot continue playback.
 function toggleGuided(){
  if(guidedPlaying){stopVoice();renderStep();return;}
  if(mode!=='learn')return;
  if(!store.settings.sound||!('speechSynthesis' in window)){
    el('guideStatus').textContent='설정에서 음성 기능을 켜고 음성을 시험해 주세요.';return;
  }
- // Never cancel a silent, idle Safari synthesizer just before starting speech.
- if(speechSynthesis.speaking||speechSynthesis.pending){cancelSpeechOnly();}
+ // Start the first utterance synchronously within the button click (iPad Safari).
+ if(speechSynthesis.speaking||speechSynthesis.pending||speechSynthesis.paused)cancelSpeechOnly();
  guidedPlaying=true;voiceReady=true;guidedToken++;
  step=0;answered=false;wrongCount=0;
- el('guideStatus').textContent='음성 시작 중…';
+ el('guideStatus').textContent='설명을 시작해요…';
  el('guideButton').textContent='■ 연속 설명 멈추기';
- guidedNextStep(); // synchronous: Safari still considers this a user gesture
+ guidedNextStep();
 }
 function guidedNextStep(){
  if(!guidedPlaying||mode!=='learn')return;
  const token=guidedToken;
- const all=stepsFor(),d=all[step];
+ const all=stepsFor(), d=all[step];
  guidedVisualStart(d);
  renderStep();
- const intro=`${ordinalSteps[step]||step+1+'번째'} 단계입니다.`;
- // One utterance avoids Safari's unreliable timed chains of short utterances.
- const message=intro+'  '+spokenStepTitle(d.title)+'.  '+d.text.replaceAll('\n','  ');
- const utterance=makeUtterance(message);
- guidedUtterance=utterance;
- let started=false,ended=false;
- function removeStartTimer(){if(guidedStartTimer!==null){clearTimeout(guidedStartTimer);guidedStartTimer=null;}}
+ const opening=`${ordinalSteps[step]||step+1+'번째'} 단계입니다.`;
+ // Sentence title and each explanatory clause are separate to enforce real pauses.
+ const chunks=[{text:opening,pause:750},
+               {text:spokenStepTitle(d.title),pause:650},
+               ...speechPieces(d.text)];
+ let idx=0;
+ function status(msg){if(token===guidedToken)el('guideStatus').textContent=msg;}
  function fail(message){
-   if(ended||token!==guidedToken)return;
-   ended=true;removeStartTimer();
-   stopGuided();
-   el('guideStatus').textContent=message+' 아래 「설명 듣기」는 정상인지 확인해 주세요.';
- }
- utterance.onstart=()=>{
    if(token!==guidedToken)return;
-   started=true;removeStartTimer();
-   el('guideStatus').textContent=`🔊 설명 중 · ${step+1}/${all.length} 단계`;
- };
- utterance.onend=()=>{
-   if(ended||token!==guidedToken)return;
-   ended=true;removeStartTimer();guidedUtterance=null;
-   // Reveal results only after the spoken explanation has reached the answer.
-   visualReveal={ones:!!d.showOnes,tens:!!d.showTens,carry:!!d.showCarry};
-   const [a,b]=LEVELS[level].examples[exampleIndex];
-   el('board').innerHTML=drawBoard(d,a,b,LEVELS[level]);
-   if(step===all.length-1){
-     stopGuided();renderStep();
-     el('guideStatus').textContent='✅ 끝까지 설명했어요. 이제 「함께 풀기」를 해 볼까요?';
+   stopGuided();
+   el('guideStatus').textContent=message+' 아래 「설명 듣기」로 확인해 주세요.';
+ }
+ function clearStart(){if(guidedStartTimer!==null){clearTimeout(guidedStartTimer);guidedStartTimer=null;}}
+ function nextChunk(){
+   if(token!==guidedToken||!guidedPlaying)return;
+   if(idx>=chunks.length){
+     // The teacher has finished the step. Final board state should now be visible.
+     visualReveal={ones:!!d.showOnes,tens:!!d.showTens,carry:!!d.showCarry};
+     const [a,b]=LEVELS[level].examples[exampleIndex];
+     el('board').innerHTML=drawBoard(d,a,b,LEVELS[level]);
+     if(step===all.length-1){
+       stopGuided();renderStep();
+       el('guideStatus').textContent='✅ 마지막 정리까지 설명했어요. 「함께 풀기」도 해 보세요.';
+       return;
+     }
+     status('잠깐 생각해 볼까요? 다음 단계로 이어집니다.');
+     guidedTimer=setTimeout(()=>{
+       guidedTimer=null;
+       if(!guidedPlaying||token!==guidedToken)return;
+       step++;guidedNextStep();
+     },Math.round(1250*(store.settings.pauseMultiplier||1.4)));
      return;
    }
-   el('guideStatus').textContent='잠시 생각한 뒤 다음 단계로 넘어가요…';
-   guidedTimer=setTimeout(()=>{
-     guidedTimer=null;
-     if(!guidedPlaying||token!==guidedToken)return;
-     step++;guidedNextStep();
-   },Math.round(1400*(store.settings.pauseMultiplier||1.4)));
- };
- utterance.onerror=e=>{
-   if(ended||token!==guidedToken)return;
-   fail(e.error==='not-allowed'?'음성이 차단됐어요.':`연속 음성 오류 (${e.error||'알 수 없음'}).`);
- };
- guidedStartTimer=setTimeout(()=>{
-   guidedStartTimer=null;
-   if(!started&&!ended&&token===guidedToken){
+   const chunk=chunks[idx++];
+   let utterance;
+   try{utterance=makeUtterance(chunk.text);}catch(e){fail('음성 준비 중 문제가 생겼어요.');return;}
+   guidedUtterance=utterance; // prevent iOS Safari GC
+   let started=false,ended=false;
+   utterance.onstart=()=>{
+     if(token!==guidedToken||ended)return;
+     started=true;clearStart();
+     status(`🔊 천천히 설명 중 · ${step+1}/${all.length} 단계`);
+   };
+   utterance.onend=()=>{
+     if(ended||token!==guidedToken)return;
+     ended=true;clearStart();guidedUtterance=null;
+     // Reveal after saying the sentence that tells the child to write it,
+     // not one full lesson step later.
+     guidedRevealForPhrase(chunk.text);
+     status(`설명 중 · ${step+1}/${all.length} 단계 · 잠깐 쉬어요`);
+     guidedTimer=setTimeout(()=>{guidedTimer=null;nextChunk();},
+       Math.round(chunk.pause*(store.settings.pauseMultiplier||1.4)));
+   };
+   utterance.onerror=e=>{
+     if(ended||token!==guidedToken)return;
+     ended=true;clearStart();
+     fail(e.error==='not-allowed'?'음성 사용이 차단됐어요.':`음성이 중단됐어요 (${e.error||'알 수 없음'}).`);
+   };
+   guidedStartTimer=setTimeout(()=>{
+     guidedStartTimer=null;
+     if(started||ended||token!==guidedToken)return;
      try{if(speechSynthesis.paused)speechSynthesis.resume();}catch(e){}
      guidedStartTimer=setTimeout(()=>{
        guidedStartTimer=null;
-       if(!started&&!ended&&token===guidedToken)fail('연속 음성이 시작되지 않았어요.');
-     },3500);
-   }
- },2500);
- try{
-   speechSynthesis.speak(utterance);
-   if(speechSynthesis.paused)speechSynthesis.resume();
- }catch(e){fail('연속 음성을 실행하지 못했어요.');}
+       if(!started&&!ended&&token===guidedToken)fail('음성 재생이 시작되지 않았어요.');
+     },5500);
+   },2800);
+   try{
+     speechSynthesis.speak(utterance);
+     if(speechSynthesis.paused)speechSynthesis.resume();
+   }catch(e){fail('음성 재생에 실패했어요.');}
+ }
+ nextChunk();
 }
 
 function speakCurrent(){
