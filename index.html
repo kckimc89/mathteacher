@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f5f7ff"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="수학선생님"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png"><link rel="manifest" href="manifest.webmanifest"><title>수학선생님</title>
 <style>
-:root{--ink:#213451;--sub:#536881;--blue:#3066d7;--edge:#dce5f4;--light:#eaf2ff;--bg:#f5f7ff;--green:#137854}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif}button,select{font:inherit}button{cursor:pointer;touch-action:manipulation}button:disabled{opacity:.43;cursor:default}.hidden{display:none!important}header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--edge)}header>div{max-width:920px;margin:auto;padding:13px 18px;display:flex;justify-content:space-between;align-items:center;gap:8px}.logo{font-weight:850;font-size:19px}.version{color:var(--sub);font-size:12px}.tabs{display:flex;gap:3px}.tabs button{background:transparent;border:0;padding:9px;border-radius:9px;font-weight:750;color:var(--sub)}.tabs button.active{background:var(--light);color:var(--blue)}main{max-width:920px;margin:auto;padding:12px 15px 45px}.card{background:white;border:1px solid var(--edge);border-radius:19px;padding:19px;margin:10px 0;box-shadow:0 3px 12px #273a5d08}h1{font-size:23px;margin:4px 0 12px}h2{font-size:19px;margin:5px 0 11px}p{line-height:1.65;color:var(--sub)}.muted{font-size:14px;color:var(--sub)}.levels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.level{padding:15px;border:1.5px solid var(--edge);text-align:left;border-radius:13px;background:white;min-height:90px}.level b{display:block;margin-bottom:7px;font-size:16px}.level small{color:var(--sub);line-height:1.45}.level.selected{border-color:var(--blue);background:var(--light)}button.primary{background:var(--blue);color:#fff;border:0;border-radius:13px;font-weight:800;min-height:51px;padding:12px 16px}button.secondary{background:white;border:1.5px solid var(--edge);border-radius:13px;color:var(--ink);font-weight:750;min-height:48px;padding:10px 12px}button.soft{background:var(--light);border:0;color:var(--blue);border-radius:13px;font-weight:750;min-height:48px;padding:10px 12px}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.row>button{flex:1;min-width:145px}.modebar{display:flex;gap:10px;margin:14px 0}.modebar button{flex:1;min-height:52px;font-weight:800;background:#fff;border:1.5px solid var(--edge);border-radius:13px}.modebar button.active{border-color:var(--blue);background:var(--light);color:var(--blue)}.titleline{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.badge{background:var(--light);color:var(--blue);border-radius:20px;font-size:13px;font-weight:800;padding:7px 10px}.player{border:1px solid #dce5f4;border-radius:16px;background:#f8fbff;padding:15px 10px;margin:12px 0}.placeheads,.line{display:grid;grid-template-columns:55px 76px 76px;justify-content:center;text-align:center;align-items:center}.placeheads{font-size:14px;font-weight:750;color:var(--sub);margin-bottom:5px}.digit{font-variant-numeric:tabular-nums;font-size:46px;font-weight:850;min-height:64px;display:flex;align-items:center;justify-content:center;border-radius:12px;transition:background-color .14s}.digit.hot{background:#dbeaff;color:#165ad0;outline:2px solid #8cb6ff}.digit.result{color:var(--green)}.digit.result.hot{background:#d8f8e9;color:#006d42;outline-color:#64d2a1}.digit.op{font-size:35px}.digit.blank{color:#a8b6cb}.upper{height:51px}.upper .digit{min-height:43px;font-size:26px}.carry{color:#165ec1;font-size:25px;font-weight:900}.carry.hot{background:#dbeaff;border:2px solid #89b2ff}.borrowNote{text-align:center;color:#215eac;font-size:14px;font-weight:750;min-height:24px}.rule{max-width:205px;margin:1px auto 4px;border-top:3px solid #3b4f6d;transform:translateX(25px)}.teacher{display:flex;gap:12px;align-items:flex-start;background:#eaf2ff;padding:17px;border-radius:15px;margin:12px 0}.teacher .face{font-size:28px}.speakerText{font-size:19px;font-weight:700;line-height:1.75;white-space:pre-line;min-height:64px}.teacher small{display:block;color:var(--sub);font-size:14px;font-weight:550;margin-bottom:2px}.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.controls button{min-width:0;font-size:15px}.controls2{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}.controls2 button{flex:1;min-width:165px}.settingsStrip{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0;font-size:14px;color:var(--sub)}.settingsStrip select{min-width:120px;max-width:195px}select{background:white;border:1px solid var(--edge);padding:9px;border-radius:9px}.status{min-height:25px;color:#285aab;font-weight:750;font-size:14px;margin:8px 0}.track{height:8px;border-radius:20px;background:#e4eaf4;overflow:hidden;margin:12px 0}.track>span{display:block;background:var(--blue);height:100%;width:0;transition:width .3s}.quiz{border:2px solid #d4e4fc;padding:15px;border-radius:15px;margin:12px 0}.quiz h2{font-size:19px}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.choices button{min-height:67px;border:2px solid #d8e2f1;border-radius:12px;background:white;font-size:27px;font-weight:850}.feedback{font-weight:700;min-height:20px;color:#2c6e46}.footnote{font-size:13px;line-height:1.6}.actionsBottom{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.actionsBottom button{flex:1;min-width:150px}.settingrow{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:12px 0;border-bottom:1px solid #ebeff5}.settingrow:last-child{border:0}input[type=checkbox]{width:22px;height:22px}.statrow{display:flex;gap:8px}.statrow>div{flex:1;background:var(--light);padding:12px;border-radius:12px;text-align:center}.statrow strong{display:block;font-size:24px}footer{text-align:center;font-size:12px;color:var(--sub);padding:16px}@media(max-width:520px){main{padding:8px 10px 35px}.card{padding:13px}.speakerText{font-size:17px}.digit{font-size:41px}.controls button{font-size:13px;padding:8px 3px}.level{padding:11px}.level b{font-size:14px}.logo{font-size:17px}}
+:root{--ink:#213451;--sub:#536881;--blue:#3066d7;--edge:#dce5f4;--light:#eaf2ff;--bg:#f5f7ff;--green:#137854}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif}button,select{font:inherit}button{cursor:pointer;touch-action:manipulation}button:disabled{opacity:.43;cursor:default}.hidden{display:none!important}header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--edge)}header>div{max-width:920px;margin:auto;padding:13px 18px;display:flex;justify-content:space-between;align-items:center;gap:8px}.logo{font-weight:850;font-size:19px}.version{color:var(--sub);font-size:12px}.tabs{display:flex;gap:3px}.tabs button{background:transparent;border:0;padding:9px;border-radius:9px;font-weight:750;color:var(--sub)}.tabs button.active{background:var(--light);color:var(--blue)}main{max-width:920px;margin:auto;padding:12px 15px 45px}.card{background:white;border:1px solid var(--edge);border-radius:19px;padding:19px;margin:10px 0;box-shadow:0 3px 12px #273a5d08}h1{font-size:23px;margin:4px 0 12px}h2{font-size:19px;margin:5px 0 11px}p{line-height:1.65;color:var(--sub)}.muted{font-size:14px;color:var(--sub)}.levels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.level{padding:15px;border:1.5px solid var(--edge);text-align:left;border-radius:13px;background:white;min-height:90px}.level b{display:block;margin-bottom:7px;font-size:16px}.level small{color:var(--sub);line-height:1.45}.level.selected{border-color:var(--blue);background:var(--light)}button.primary{background:var(--blue);color:#fff;border:0;border-radius:13px;font-weight:800;min-height:51px;padding:12px 16px}button.secondary{background:white;border:1.5px solid var(--edge);border-radius:13px;color:var(--ink);font-weight:750;min-height:48px;padding:10px 12px}button.soft{background:var(--light);border:0;color:var(--blue);border-radius:13px;font-weight:750;min-height:48px;padding:10px 12px}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.row>button{flex:1;min-width:145px}.modebar{display:flex;gap:10px;margin:14px 0}.modebar button{flex:1;min-height:52px;font-weight:800;background:#fff;border:1.5px solid var(--edge);border-radius:13px}.modebar button.active{border-color:var(--blue);background:var(--light);color:var(--blue)}.titleline{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.badge{background:var(--light);color:var(--blue);border-radius:20px;font-size:13px;font-weight:800;padding:7px 10px}.horizontalProblem{font-size:35px;font-weight:850;text-align:center;font-variant-numeric:tabular-nums;padding:15px 5px;letter-spacing:.5px}.horizontalProblem .highlightAnswer{color:var(--green);background:#dcf9e9;border-radius:9px;padding:2px 9px}.convertNote{text-align:center;color:var(--blue);font-weight:750;padding:8px 0 2px}.player{border:1px solid #dce5f4;border-radius:16px;background:#f8fbff;padding:15px 10px;margin:12px 0}.placeheads,.line{display:grid;grid-template-columns:55px 76px 76px;justify-content:center;text-align:center;align-items:center}.placeheads{font-size:14px;font-weight:750;color:var(--sub);margin-bottom:5px}.digit{font-variant-numeric:tabular-nums;font-size:46px;font-weight:850;min-height:64px;display:flex;align-items:center;justify-content:center;border-radius:12px;transition:background-color .14s}.digit.hot{background:#dbeaff;color:#165ad0;outline:2px solid #8cb6ff}.digit.result{color:var(--green)}.digit.result.hot{background:#d8f8e9;color:#006d42;outline-color:#64d2a1}.digit.op{font-size:35px}.digit.blank{color:#a8b6cb}.upper{height:51px}.upper .digit{min-height:43px;font-size:26px}.carry{color:#165ec1;font-size:25px;font-weight:900}.carry.hot{background:#dbeaff;border:2px solid #89b2ff}.borrowNote{text-align:center;color:#215eac;font-size:14px;font-weight:750;min-height:24px}.rule{max-width:205px;margin:1px auto 4px;border-top:3px solid #3b4f6d;transform:translateX(25px)}.teacher{display:flex;gap:12px;align-items:flex-start;background:#eaf2ff;padding:17px;border-radius:15px;margin:12px 0}.teacher .face{font-size:28px}.speakerText{font-size:19px;font-weight:700;line-height:1.75;white-space:pre-line;min-height:64px}.teacher small{display:block;color:var(--sub);font-size:14px;font-weight:550;margin-bottom:2px}.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.controls button{min-width:0;font-size:15px}.controls2{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}.controls2 button{flex:1;min-width:165px}.settingsStrip{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0;font-size:14px;color:var(--sub)}.settingsStrip select{min-width:120px;max-width:195px}select{background:white;border:1px solid var(--edge);padding:9px;border-radius:9px}.status{min-height:25px;color:#285aab;font-weight:750;font-size:14px;margin:8px 0}.track{height:8px;border-radius:20px;background:#e4eaf4;overflow:hidden;margin:12px 0}.track>span{display:block;background:var(--blue);height:100%;width:0;transition:width .3s}.quiz{border:2px solid #d4e4fc;padding:15px;border-radius:15px;margin:12px 0}.quiz h2{font-size:19px}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.choices button{min-height:67px;border:2px solid #d8e2f1;border-radius:12px;background:white;font-size:27px;font-weight:850}.feedback{font-weight:700;min-height:20px;color:#2c6e46}.footnote{font-size:13px;line-height:1.6}.actionsBottom{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.actionsBottom button{flex:1;min-width:150px}.settingrow{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:12px 0;border-bottom:1px solid #ebeff5}.settingrow:last-child{border:0}input[type=checkbox]{width:22px;height:22px}.statrow{display:flex;gap:8px}.statrow>div{flex:1;background:var(--light);padding:12px;border-radius:12px;text-align:center}.statrow strong{display:block;font-size:24px}footer{text-align:center;font-size:12px;color:var(--sub);padding:16px}@media(max-width:520px){main{padding:8px 10px 35px}.card{padding:13px}.speakerText{font-size:17px}.digit{font-size:41px}.controls button{font-size:13px;padding:8px 3px}.level{padding:11px}.level b{font-size:14px}.logo{font-size:17px}}
+
+.schoolRows{display:flex;flex-direction:column;gap:8px;align-items:center;min-height:55px}.schoolRow{font-size:23px;font-weight:750;font-variant-numeric:tabular-nums;background:#fff;padding:7px 15px;border-radius:10px}.schoolRow.schoolActive{background:#dcf9e9;color:#116a4c}.annotatedTop{height:35px;text-align:right;padding-right:12%;color:#225ec1;font-size:18px;font-weight:800}.annotatedBoard .horizontalProblem{font-size:30px}.horizontalCarry{background:#dceaff;border-radius:7px;padding:2px 8px}.settingsStrip select{max-width:220px}
 </style></head><body>
-<header><div><span><span class="logo">📘 수학선생님</span> <span class="version">V3.2</span></span><nav class="tabs"><button id="tabStudy" class="active" onclick="switchPage('study')">공부</button><button id="tabRecord" onclick="switchPage('record')">기록</button><button id="tabSettings" onclick="switchPage('settings')">설정</button></nav></div></header>
+<header><div><span><span class="logo">📘 수학선생님</span> <span class="version">V3.4</span></span><nav class="tabs"><button id="tabStudy" class="active" onclick="switchPage('study')">공부</button><button id="tabRecord" onclick="switchPage('record')">기록</button><button id="tabSettings" onclick="switchPage('settings')">설정</button></nav></div></header>
 <main>
 <section id="studyPage"><div class="card" id="course"><h1>나만의 수학 교실 🌷</h1><p>선생님 설명에 맞춰 칠판에 답이 하나씩 적혀요. 먼저 듣고, 같은 문제를 함께 풀어보세요.</p><h2>오늘은 무엇을 배울까요?</h2><div class="levels" id="levels"></div><p class="muted">한 자리부터 두 자리까지 · 설명 듣기와 직접 풀기</p><button class="primary" style="width:100%" onclick="startLesson()">수업 시작 ▶</button></div>
-<div class="card hidden" id="lesson"><div class="titleline"><h2 id="lessonTitle"></h2><span class="badge" id="lessonBadge">한 문제를 끝까지</span></div><div class="modebar"><button id="modeLecture" class="active" onclick="selectMode('lecture')">📖 선생님 강의</button><button id="modePractice" onclick="selectMode('practice')">✏️ 함께 풀기</button></div><div class="settingsStrip"><label>설명 속도 <select id="paceSelect" onchange="setPace(this.value)"><option value="normal">보통</option><option value="slow">천천히 (추천)</option><option value="slower">아주 천천히</option></select></label><span id="modeHint">선생님이 칠판에 차례로 써 줄게요.</span></div><div class="track"><span id="progressFill"></span></div><div class="player" id="board"></div><div class="teacher"><span class="face">👩‍🏫</span><div class="speakerText"><small id="sectionText">오늘의 설명</small><span id="speechText">강의 듣기를 눌러 시작해 보세요.</span></div></div><div class="status" id="status" aria-live="polite"></div><div class="quiz hidden" id="quiz"><h2 id="questionTitle"></h2><div class="choices" id="choices"></div><p class="feedback" id="feedback"></p></div><div class="controls"><button class="primary" id="playButton" onclick="playOrPause()">▶ 강의 듣기</button><button class="secondary" id="repeatButton" onclick="repeatCurrent()">↩ 현재 설명 다시</button><button class="secondary" onclick="restartLesson()">⟲ 처음부터</button></div><div class="controls2"><button class="soft" onclick="previousCue()">← 이전 설명</button><button class="soft" onclick="nextCue()">다음 설명 →</button></div><div class="actionsBottom"><button class="secondary" onclick="goCourses()">다른 단계 선택</button><button class="soft" onclick="nextExample()">비슷한 문제</button></div><p class="footnote">선생님 강의는 한 칠판에서 이어집니다. 함께 풀기도 선생님이 설명하며 이어지고, 중간 질문에서는 아이의 답을 기다립니다. 잠시 멈추면 화면을 그대로 두며, 이어서 들을 때는 현재 짧은 문장부터 다시 시작할 수 있습니다. 마지막에는 답을 그대로 둔 채 숫자를 강조하며 복습합니다.</p></div></section>
+<div class="card hidden" id="lesson"><div class="titleline"><h2 id="lessonTitle"></h2><span class="badge" id="lessonBadge">한 문제를 끝까지</span></div><div class="modebar"><button id="modeLecture" class="active" onclick="selectMode('lecture')">📖 선생님 강의</button><button id="modePractice" onclick="selectMode('practice')">✏️ 함께 풀기</button></div><div class="settingsStrip"><label for="layoutSelect">풀이 방법 <select id="layoutSelect" onchange="setProblemLayout(this.value)"><option value="vertical">세로셈</option><option value="convert">가로 → 세로셈</option><option value="school">학교식 가로셈</option><option value="annotated">가로셈 보조표시</option><option value="compare">같은 문제 비교</option></select></label><label>설명 속도 <select id="paceSelect" onchange="setPace(this.value)"><option value="normal">보통</option><option value="slow">천천히 (추천)</option><option value="slower">아주 천천히</option></select></label><span id="modeHint">선생님이 칠판에 차례로 써 줄게요.</span></div><div class="track"><span id="progressFill"></span></div><div class="player" id="board"></div><div class="teacher"><span class="face">👩‍🏫</span><div class="speakerText"><small id="sectionText">오늘의 설명</small><span id="speechText">강의 듣기를 눌러 시작해 보세요.</span></div></div><div class="status" id="status" aria-live="polite"></div><div class="quiz hidden" id="quiz"><h2 id="questionTitle"></h2><div class="choices" id="choices"></div><p class="feedback" id="feedback"></p></div><div class="controls"><button class="primary" id="playButton" onclick="playOrPause()">▶ 강의 듣기</button><button class="secondary" id="repeatButton" onclick="repeatCurrent()">↩ 현재 설명 다시</button><button class="secondary" onclick="restartLesson()">⟲ 처음부터</button></div><div class="controls2"><button class="soft" onclick="previousCue()">← 이전 설명</button><button class="soft" onclick="nextCue()">다음 설명 →</button></div><div class="actionsBottom"><button class="secondary" onclick="goCourses()">다른 단계 선택</button><button class="soft" onclick="nextExample()">비슷한 문제</button></div><p class="footnote">네 가지 풀이를 선택할 수 있어요. 「같은 문제 비교」는 세로셈과 학교식 가로셈을 같은 문제로 연속해서 보여줘요. 가로셈 보조표시는 학교의 표준 필기법이 아니라 이해를 돕는 표시예요. 선생님 강의는 한 칠판에서 이어집니다. 함께 풀기도 선생님이 설명하며 이어지고, 중간 질문에서는 아이의 답을 기다립니다. 잠시 멈추면 화면을 그대로 두며, 이어서 들을 때는 현재 짧은 문장부터 다시 시작할 수 있습니다. 마지막에는 답을 그대로 둔 채 숫자를 강조하며 복습합니다.</p></div></section>
 <section class="card hidden" id="recordPage"><h1>나의 학습 기록</h1><div class="statrow"><div><strong id="statLessons">0</strong><span>완료 수업</span></div><div><strong id="statSolved">0</strong><span>맞힌 질문</span></div></div><div id="history"></div><div class="actionsBottom"><button class="secondary" onclick="exportData()">기록 백업</button><button class="secondary" onclick="document.getElementById('importFile').click()">기록 복원</button></div><input id="importFile" class="hidden" type="file" accept="application/json" onchange="importData(event)"></section>
 <section class="card hidden" id="settingsPage"><h1>부모 설정</h1><div class="settingrow"><label for="soundOn">한국어 음성 설명</label><input type="checkbox" id="soundOn" onchange="saveSettings()"></div><div class="settingrow"><label for="voiceRate">기본 음성 속도</label><select id="voiceRate" onchange="saveSettings()"><option value="0.72">느리게</option><option value="0.83">천천히 (추천)</option><option value="0.95">보통</option></select></div><div class="settingrow"><label for="voiceSelect">한국어 목소리</label><select id="voiceSelect" onchange="saveSettings()"><option value="">기기 기본</option></select></div><div class="settingrow"><label for="numberPause">숫자 뒤 아주 짧게 쉬기</label><input type="checkbox" id="numberPause" onchange="saveSettings()"></div><p class="footnote">같은 웹사이트에서 업데이트하면 기존 학습 기록을 유지합니다. 음성 재생은 iPad Safari의 음성 합성 지원에 따라 달라질 수 있습니다. 재생을 누른 뒤에도 소리가 없다면 설정의 음성과 기기 음량을 확인해 주세요.</p><button class="secondary" onclick="testVoice()">🔊 목소리 시험</button></section>
 <footer>수학선생님 · V3.2 · 설치 없이 사용하는 학습 웹앱</footer></main>
@@ -27,6 +29,7 @@ const LEVELS=[
 const defaults={lessons:0,solved:0,attempts:0,history:[],settings:{auto:false,rate:0.83,sound:true,voice:'',pauseMultiplier:1.4,numberPause:true}};
 function defaultStore(){return JSON.parse(JSON.stringify(defaults))}
 function load(){try{const old=JSON.parse(localStorage.getItem(KEY));if(!old||typeof old!=='object')return defaultStore();return {...defaultStore(),...old,settings:{...defaults.settings,...(old.settings||{})},history:Array.isArray(old.history)?old.history:[]}}catch{return defaultStore()}}
+let problemLayout='vertical';
 let store=load(), level=0,exampleIndex=0,mode='lecture',cues=[],cursor=0,playerState='idle',runId=0,activeSpeech=null,activeTimer=null,activeDelay=null,spokenIndex=0,wrong=0,awaitingAnswer=false,finishedRecorded=false,voiceUsed=false,practiceIndexes=[],practiceStep=0,practiceSettling=false;
 const $=id=>document.getElementById(id);const esc=s=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const opWord=kind=>kind==='sub'?'빼기':'더하기';
@@ -37,11 +40,16 @@ function persist(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch{}}
 function current(){let [a,b]=LEVELS[level].examples[exampleIndex];const kind=LEVELS[level].kind;let x=a%10,y=b%10,A=Math.floor(a/10),B=Math.floor(b/10),carry=kind==='add'&&x+y>=10,borrow=kind==='sub'&&x<y;return {a,b,kind,x,y,A,B,carry,borrow,ones:kind==='add'?(x+y)%10:(borrow?x+10:x)-y,tens:kind==='add'?A+B+(carry?1:0):A-B-(borrow?1:0),total:kind==='add'?a+b:a-b};}
 const state=(over={})=>({ones:false,tens:false,carry:false,borrow:false,hot:[],...over});
 function cue(say,section,view,extra={}){return {say,section,view:state(view),pause:640,...extra}}
-function makeCues(p){
+function makeVerticalCues(p){
  const t=[],verb=opWord(p.kind),pair=`${p.a} ${verb} ${p.b}`,A=p.A,B=p.B,x=p.x,y=p.y;
- t.push(cue(`오늘은 ${pair} 문제를 풀어 볼게요.`, '오늘의 문제', {hot:[]},{pause:840}));
+ t.push(cue(`오늘은 ${pair} 문제를 풀어 볼게요.`, '오늘의 문제', {hot:[]},{pause:840,layout:problemLayout==='convert'?'horizontal':'vertical'}));
+ if(problemLayout==='convert'){
+  t.push(cue(`이 문제는 가로로 적혀 있어요. 먼저 식을 천천히 읽어 볼까요?`, '가로셈 살펴보기', {}, {pause:900,layout:'horizontal'}));
+  t.push(cue(`가로로 적힌 식을 세로로 옮겨서 계산해 볼게요. 첫 번째 수 ${p.a}를 위에 쓰고, 두 번째 수 ${p.b}를 그 아래에 써요. 같은 자리끼리 맞추는 것이 중요해요.`, '세로셈으로 바꾸기', {hot:['aO','bO']},{pause:900,layout:'vertical'}));
+  t.push(cue(`세로로 옮긴 뒤에는 어느 자리부터 계산할까요?`, '계산 순서 확인', {hot:['aO','bO']},{pause:850,layout:'vertical',ask:{prompt:'어느 자리부터 계산할까요?',answer:'일의 자리',opts:['십의 자리','일의 자리','왼쪽 자리']},questionVoice:'가로셈을 세로로 옮겼어요. 어느 자리부터 계산할까요? 답을 골라 보세요.'}));
+ }
  if(level===0)t.push(cue(`이 숫자에서 오른쪽은 일의 자리이고, 왼쪽은 십의 자리입니다.`, '자릿값 알아보기',{hot:['aT','aO']},{pause:820}));
- t.push(cue(`세로셈에서는 같은 자리끼리 맞춰 적어요.`, '자릿수 맞추기',{hot:['aO','bO']},{pause:750}));
+ if(problemLayout==='vertical')t.push(cue(`세로셈에서는 같은 자리끼리 맞춰 적어요.`, '자릿수 맞추기',{hot:['aO','bO']},{pause:750}));
  t.push(cue(`계산은 오른쪽 일의 자리부터 시작해요.`, '계산 순서',{hot:['aO','bO']},{pause:820}));
  if(p.kind==='add'){
   const sum=x+y;
@@ -63,7 +71,7 @@ function makeCues(p){
   }
  }else{
   if(p.borrow){
-   t.push(cue(`일의 자리 ${x}에서 ${y}를 바로 뺄 수 없어요. 십의 자리에서 십 하나를 가져와요.`,'받아내림',{hot:['aO','bO','aT']},{pause:890}));
+   t.push(cue(`일의 자리 ${x}에서 ${particle(y,'을','를')} 바로 뺄 수 없어요. 십의 자리에서 십 하나를 가져와요.`,'받아내림',{hot:['aO','bO','aT']},{pause:890}));
    t.push(cue(`십의 자리는 ${p.A-1}이 되고, 일의 자리는 ${x+10}이 됩니다.`,'받아내림 확인',{borrow:true,hot:['borrowT','borrowO']},{pause:960}));
   }
   t.push(cue(`일의 자리에서 ${p.borrow?x+10:x} 빼기 ${particle(y,'는','는')} ${isEnding(p.ones)}.`,'일의 자리 계산',{borrow:p.borrow,hot:['aO','bO']},{ask:{prompt:`${p.borrow?x+10:x} − ${y} = ?`,answer:p.ones,opts:options(p.ones)}}));
@@ -87,6 +95,9 @@ function makeCues(p){
  t.push(cue(`${pair}. 답은 ${p.total}입니다.`,'복습 · 완성',{...complete,hot:['rT','rO']},{pause:700}));
  const reminder=p.carry?'일의 자리부터 계산하고, 받아올림한 1까지 십의 자리에서 더해요.':p.borrow?'일의 자리부터 계산하고, 십 하나를 가져왔다면 바뀐 숫자로 계산해요.':'일의 자리부터 계산하고, 그다음 십의 자리를 계산해요.';
  t.push(cue(`오늘의 중요한 점입니다. ${reminder}`,'오늘의 핵심',{...complete,hot:['rT','rO']},{pause:720}));
+ if(problemLayout==='convert'){
+  t.push(cue(`세로셈으로 구한 답을 처음 가로셈의 빈칸에 적어요. ${pair}. 답은 ${p.total}입니다.`, '가로셈 정답 완성', {...complete,hot:['rT','rO']}, {pause:900,layout:'horizontalDone'}));
+ }
  // Reveal each written digit AFTER the matching spoken instruction finishes.
  for(let k=0;k<t.length;k++){
    const item=t[k];
@@ -97,9 +108,68 @@ function makeCues(p){
  }
  return t;
 }
+
+// V3.4: four explicit approaches and a comparison lesson.
+// All methods keep the same arithmetic problem; explanatory auxiliary marks
+// are never presented as a standard school convention.
+function makeCues(p){
+ if(problemLayout==='vertical'||problemLayout==='convert')return makeVerticalCues(p);
+ if(problemLayout==='annotated'){
+   const original=problemLayout;
+   problemLayout='vertical';
+   const result=makeVerticalCues(p);
+   problemLayout=original;
+   result.forEach(c=>{c.layout='annotated';c.section=c.section.replace('세로셈','가로셈');c.say=c.say.replace('세로셈에서는 같은 자리끼리 맞춰 적어요.','가로로 적힌 문제를 그대로 계산해요. 오른쪽 일의 자리부터 시작합니다.').replace('일의 자리 아래에','답의 일의 자리에').replace('십의 자리 아래에','답의 십의 자리에').replace('십의 자리 위에 작은 1','답의 십의 자리 위에 작은 1')});
+   result.unshift(cue('이번에는 가로로 적힌 계산식을 그대로 풀어 볼게요. 세로셈에서 배운 것처럼 일의 자리부터 계산합니다. 작은 받아올림과 받아내림 숫자는 학습을 돕기 위한 표시입니다.','가로셈 직접 풀이',{hot:[]},{layout:'annotated',pause:1000}));
+   return result;
+ }
+ if(problemLayout==='school')return makeSchoolCues(p);
+ if(problemLayout==='compare'){
+   problemLayout='vertical';let first=makeVerticalCues(p);
+   problemLayout='school';let second=makeSchoolCues(p);
+   problemLayout='compare';
+   first.unshift(cue('같은 문제를 두 가지 방식으로 풀어 볼게요. 먼저 세로셈입니다.','첫 번째 · 세로셈',{}, {layout:'vertical',pause:850}));
+   second.unshift(cue('이번에는 같은 문제를 가로셈으로 직접 풀어 볼게요.','두 번째 · 학교식 가로셈',{hot:[]},{layout:'school',pause:850}));
+   second.push(cue('세로셈과 가로셈의 계산 방법은 다르게 보일 수 있지만 답은 같습니다. 자신에게 편한 방법부터 익혀 보세요.','두 방법 비교',{schoolRows:[`${p.a} ${p.kind==='add'?'+':'−'} ${p.b} = ${p.total}`],schoolFinal:true,hot:[]},{layout:'school',pause:900}));
+   return first.concat(second);
+ }
+ return makeVerticalCues(p);
+}
+function makeSchoolCues(p){
+ const t=[],isAdd=p.kind==='add',op=isAdd?'더하기':'빼기',symbol=isAdd?'+':'−';
+ const bT=p.B*10,bO=p.y, intermediate=isAdd?p.a+bT:p.a-bT;
+ const rows=[];
+ const v=(hot=[],extra={})=>({schoolRows:[...rows],schoolFinal:false,hot,...extra});
+ const add=(text,section,hot=[],extra={})=>t.push(cue(text,section,v(hot),{layout:'school',pause:850,...extra}));
+ add(`오늘은 ${p.a} ${op} ${p.b} 문제를 가로셈으로 직접 풀어 볼게요.`, '학교식 가로셈');
+ if(bT){
+   add(`${particle(p.b,'을','를')} ${particle(bT,'과','와')} ${bO}로 나누어 생각해요.`, '수를 나누어 생각하기',['operand']);
+   rows.push(`${p.b} = ${bT} + ${bO}`);
+   add(`먼저 ${p.a}${isAdd?'에':'에서'} ${particle(bT,'을','를')} ${isAdd?'더하면':'빼면'} 얼마일까요?`, '십 단위 계산',['tens'],{ask:{prompt:`${p.a} ${symbol} ${bT} = ?`,answer:intermediate,opts:options(intermediate)}});
+   rows.push(`${p.a} ${symbol} ${bT} = ${intermediate}`);
+ }else{
+   add(`이번 문제는 더하는 수나 빼는 수가 한 자리입니다. 그 수를 그대로 계산해요.`, '가로셈 계산 시작');
+ }
+ const before=bT?intermediate:p.a;
+ const final=p.total;
+ if(!bO){
+   rows.push(`${before} = ${final}`);
+   add(`남은 일의 자리 숫자는 0입니다. 답은 ${final}입니다.`, '답 완성',['answer']);
+ }else{
+   add(`이제 ${before}${isAdd?'에':'에서'} ${particle(bO,'을','를')} ${isAdd?'더하면':'빼면'} 얼마일까요?`, '남은 일 단위 계산',['ones'],{ask:{prompt:`${before} ${symbol} ${bO} = ?`,answer:final,opts:options(final)}});
+   rows.push(`${before} ${symbol} ${bO} = ${final}`);
+   add(`${before} ${op} ${particle(bO,'는','는')} ${final}입니다.`, '계산 결과',['answer']);
+ }
+ t.push(cue(`그래서 ${p.a} ${op} ${p.b}는 ${final}입니다.`, '가로셈 정답 완성',v(['answer'],{schoolFinal:true}),{layout:'school',pause:1100}));
+ t.push(cue('마지막으로 계산을 다시 살펴볼게요. 가로셈에서는 수를 십 단위와 일 단위로 나누어 차례로 계산할 수 있어요.', '풀이 복습',v(['tens','ones'],{schoolFinal:true}),{layout:'school',pause:900}));
+ t.push(cue(`처음 식과 답을 확인해요. ${p.a} ${op} ${p.b}는 ${final}입니다.`, '핵심 정리',v(['answer'],{schoolFinal:true}),{layout:'school',pause:850}));
+ return t;
+}
+
 function options(correct){let nums=[correct,correct-1,correct+1,correct-2,correct+2].filter(v=>v>=0&&v<=99),out=[correct];for(const v of nums)if(!out.includes(v)&&out.length<3)out.push(v);while(out.length<3)out.push(correct+out.length+3);return out.sort((a,b)=>a-b)}
 function selectLevel(i){level=i;document.querySelectorAll('.level').forEach((e,j)=>e.classList.toggle('selected',i===j))}
 function renderLevels(){$('levels').innerHTML=LEVELS.map((l,i)=>`<button class="level ${i===level?'selected':''}" onclick="selectLevel(${i})"><b>${esc(l.name)}</b><small>${esc(l.desc)}</small></button>`).join('')}
+function setProblemLayout(value){problemLayout=['vertical','convert','school','annotated','compare'].includes(value)?value:'vertical';resetLesson();setStatus('선택한 풀이 방법으로 같은 문제를 배워요. 강의 듣기를 눌러 주세요.');}
 function startLesson(){stopPlayback();$('course').classList.add('hidden');$('lesson').classList.remove('hidden');mode='lecture';resetLesson();window.scrollTo(0,0)}
 function resetLesson(){stopPlayback();cues=makeCues(current());cursor=0;wrong=0;awaitingAnswer=false;finishedRecorded=false;updateMode();renderCue();setStatus('▶ 강의 듣기를 누르면 마지막 복습까지 이어집니다.')}
 function selectMode(newMode){
@@ -109,13 +179,30 @@ function selectMode(newMode){
  if(mode==='practice')startPractice();
 }
 function updateMode(){$('modeLecture').classList.toggle('active',mode==='lecture');$('modePractice').classList.toggle('active',mode==='practice');$('modeHint').textContent=mode==='lecture'?'말과 칠판이 함께 진행되고 마지막에는 복습해요.':'선생님이 설명하며 질문하고, 답을 고를 때까지 기다려요.';$('playButton').textContent=mode==='lecture'?'▶ 강의 듣기':'▶ 함께 풀기 시작'}
-function renderBoard(view){const p=current(),hot=new Set(view.hot||[]);const digit=(v,id,extra='')=>`<div class="digit ${extra} ${hot.has(id)?'hot':''}">${v===''?'&nbsp;':v}</div>`;
+function renderBoard(view,layout='vertical'){const p=current(),hot=new Set(view.hot||[]);const digit=(v,id,extra='')=>`<div class="digit ${extra} ${hot.has(id)?'hot':''}">${v===''?'&nbsp;':v}</div>`;
+if(layout==='school'){
+ const symbol=p.kind==='add'?'+':'−';
+ const currentRows=(view.schoolRows||[]).map((r,i)=>`<div class="schoolRow ${i===(view.schoolRows||[]).length-1?'schoolActive':''}">${esc(r)}</div>`).join('');
+ $('board').innerHTML=`<div class="horizontalProblem">${p.a} ${symbol} ${p.b} = ${view.schoolFinal?`<span class="highlightAnswer">${p.total}</span>`:'?'}</div><div class="schoolRows">${currentRows}</div><div class="convertNote">십 단위와 일 단위로 나누어 생각해요.</div>`;
+ return;
+}
+if(layout==='annotated'){
+ const symbol=p.kind==='add'?'+':'−';const h=new Set(view.hot||[]);
+ const upper=view.carry&&p.carry?`<span class="horizontalCarry">작은 1 ↑</span>`:view.borrow&&p.borrow?`<span class="horizontalCarry">${p.A}십 → ${p.A-1}십, ${p.x} → ${p.x+10}</span>`:'';
+ const rT=view.tens?(p.tens?String(p.tens):''):'□',rO=view.ones?String(p.ones):'□';
+ $('board').innerHTML=`<div class="annotatedBoard"><div class="annotatedTop">${upper}</div><div class="horizontalProblem">${p.a} ${symbol} ${p.b} = <span class="${h.has('rT')?'highlightAnswer':''}">${rT}</span><span class="${h.has('rO')?'highlightAnswer':''}">${rO}</span></div><div class="convertNote">오른쪽 일의 자리부터 · 학습용 보조표시</div></div>`;
+ return;
+}
 let upper=`<div></div><div></div><div></div>`,note='';if(view.carry&&p.carry){upper=`<div></div>${digit('1','carry','carry')}<div></div>`;note='일의 자리에서 새로 생긴 십 하나';}
 if(view.borrow&&p.borrow){upper=`<div></div>${digit(p.A+' → '+(p.A-1),'borrowT','carry')} ${digit(p.x+' → '+(p.x+10),'borrowO','carry')}`;note='십 하나를 일의 자리로 가져왔어요';}
 const tensResult=(view.tens&&p.tens>0)?String(p.tens):'·';const onesResult=view.ones?String(p.ones):'·';
-$('board').innerHTML=`<div class="placeheads"><span></span><span>십의 자리</span><span>일의 자리</span></div><div class="line upper">${upper}</div><div class="borrowNote">${note}</div><div class="line"><div></div>${digit(p.A||'','aT')}${digit(p.x,'aO')}</div><div class="line">${digit(p.kind==='add'?'+':'−','op','op')}${digit(p.B||'','bT')}${digit(p.y,'bO')}</div><div class="rule"></div><div class="line"><div></div>${digit(tensResult,'rT','result '+(!view.tens?'blank':''))}${digit(onesResult,'rO','result '+(!view.ones?'blank':''))}</div>`;
+const symbol=p.kind==='add'?'+':'−';
+ const horizontal=`<div class="horizontalProblem" aria-label="가로로 적힌 문제">${p.a} ${symbol} ${p.b} = ${layout==='horizontalDone'?`<span class="highlightAnswer">${p.total}</span>`:'?'}</div>`;
+ if(problemLayout==='convert'&&layout==='horizontal'){$('board').innerHTML=horizontal;return}
+ const prefix=problemLayout==='convert'?horizontal+`<div class="convertNote">↓ 같은 자리끼리 맞춰 세로로 계산해요</div>`:'';
+ $('board').innerHTML=prefix+`<div class="placeheads"><span></span><span>십의 자리</span><span>일의 자리</span></div><div class="line upper">${upper}</div><div class="borrowNote">${note}</div><div class="line"><div></div>${digit(p.A||'','aT')}${digit(p.x,'aO')}</div><div class="line">${digit(p.kind==='add'?'+':'−','op','op')}${digit(p.B||'','bT')}${digit(p.y,'bO')}</div><div class="rule"></div><div class="line"><div></div>${digit(tensResult,'rT','result '+(!view.tens?'blank':''))}${digit(onesResult,'rO','result '+(!view.ones?'blank':''))}</div>`;
 }
-function renderCue(){const c=cues[cursor];if(!c)return;const p=current();$('lessonTitle').textContent=LEVELS[level].name;$('lessonBadge').textContent=`${p.a} ${p.kind==='add'?'+':'−'} ${p.b}`;$('sectionText').textContent=c.section;$('speechText').textContent=mode==='practice'&&c.ask?practiceQuestionSpeech(c):c.say;renderBoard(c.view);$('progressFill').style.width=`${(cursor+1)/cues.length*100}%`;if(playerState!=='running'&&playerState!=='paused')refreshPlayButton();}
+function renderCue(){const c=cues[cursor];if(!c)return;const p=current();$('lessonTitle').textContent=LEVELS[level].name;$('lessonBadge').textContent=`${p.a} ${p.kind==='add'?'+':'−'} ${p.b}`;$('sectionText').textContent=c.section;$('speechText').textContent=mode==='practice'&&c.ask?practiceQuestionSpeech(c):c.say;renderBoard(c.view,c.layout||'vertical');$('progressFill').style.width=`${(cursor+1)/cues.length*100}%`;if(playerState!=='running'&&playerState!=='paused')refreshPlayButton();}
 function refreshPlayButton(){
  const label=playerState==='running'?'⏸ 잠시 멈추기':playerState==='paused'?'▶ 이어서 듣기':playerState==='done'?'↺ 다시 시작':mode==='practice'?'▶ 함께 풀기 시작':'▶ 강의 듣기';
  $('playButton').textContent=awaitingAnswer?'✏️ 답을 선택해 주세요':label;
@@ -123,6 +210,7 @@ function refreshPlayButton(){
 function practiceQuestionSpeech(c){
  const q=c.ask,p=current();
  if(!q)return c.say;
+ if(c.questionVoice)return c.questionVoice; if(c.layout==='school')return c.say+' 답을 골라 주세요.';
  if(q.prompt.includes(' + '))return `이제 일의 자리부터 계산해 볼까요? ${p.x} 더하기 ${p.y}는 얼마일까요? 답을 골라 보세요.`;
  if(q.prompt.includes(' − '))return `일의 자리를 빼 볼까요? ${p.borrow?p.x+10:p.x} 빼기 ${p.y}는 얼마일까요? 답을 골라 보세요.`;
  if(p.kind==='add')return p.carry?`이제 십의 자리를 계산해요. 십의 자리 숫자들과 받아올림한 1을 모두 더하면 얼마일까요?`:`이제 십의 자리도 계산해 볼까요? 아래에 적을 숫자는 얼마일까요?`;
@@ -177,7 +265,7 @@ function runCue(token){
   if(mode==='practice'&&c.ask){
     awaitingAnswer=true;wrong=0;playerState='waiting';showPracticeQuestion();return;
   }
-  if(c.after)renderBoard(c.after);
+  if(c.after)renderBoard(c.after,c.layout||'vertical');
   activeDelay=setTimeout(()=>{if(token!==runId||playerState!=='running')return;cursor++;if(cursor>=cues.length)finishLesson();else runCue(token)},pauseLength(c.pause));
  });
 }
@@ -253,7 +341,7 @@ function goCourses(){stopPlayback();$('course').classList.remove('hidden');$('le
 function nextExample(){stopPlayback();exampleIndex=(exampleIndex+1)%LEVELS[level].examples.length;resetLesson();if(mode==='practice')startPractice()}
 function switchPage(p){stopPlayback();$('studyPage').classList.toggle('hidden',p!=='study');$('recordPage').classList.toggle('hidden',p!=='record');$('settingsPage').classList.toggle('hidden',p!=='settings');['Study','Record','Settings'].forEach(name=>$('tab'+name).classList.toggle('active',name.toLowerCase()===p));if(p==='record')renderRecords();if(p==='settings')renderSettings();window.scrollTo(0,0)}
 function renderRecords(){$('statLessons').textContent=store.lessons;$('statSolved').textContent=store.solved;$('history').innerHTML=store.history.length?store.history.map(h=>`<p>${esc(h.when||'')} · ${esc(h.level||'수학 연습')} · ${h.mode==='practice'?'함께 풀기':'선생님 강의'}</p>`).join(''):'<p>아직 학습 기록이 없어요.</p>'}
-function exportData(){const blob=new Blob([JSON.stringify({app:'math-teacher',version:'3.2',data:store},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='math_records.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500)}
+function exportData(){const blob=new Blob([JSON.stringify({app:'math-teacher',version:'3.4',data:store},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='math_records.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500)}
 function importData(evt){const f=evt.target.files?.[0];if(!f)return;const reader=new FileReader();reader.onload=()=>{try{const o=JSON.parse(reader.result);if(o.app!=='math-teacher'||!o.data)throw Error('format');if(!confirm('현재 기록을 백업 기록으로 바꿀까요?'))return;store={...defaultStore(),...o.data,settings:{...defaults.settings,...o.data.settings}};persist();renderSettings();alert('기록을 복원했습니다.')}catch{alert('올바른 학습 기록 파일인지 확인해 주세요.')}finally{evt.target.value=''}};reader.readAsText(f)}
 function saveSettings(){store.settings.sound=$('soundOn').checked;store.settings.rate=Number($('voiceRate').value);store.settings.voice=$('voiceSelect').value;store.settings.numberPause=$('numberPause').checked;persist();if(!store.settings.sound)stopPlayback()}
 function populateVoices(){if(!('speechSynthesis' in window))return;const sel=$('voiceSelect'),v=store.settings.voice;sel.innerHTML='<option value="">기기 기본</option>';for(const item of speechSynthesis.getVoices().filter(x=>x.lang.toLowerCase().startsWith('ko'))){const o=document.createElement('option');o.value=item.voiceURI;o.textContent=item.name;sel.appendChild(o)}sel.value=[...sel.options].some(x=>x.value===v)?v:''}
