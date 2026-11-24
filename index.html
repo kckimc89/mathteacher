@@ -5,7 +5,7 @@
 
 .schoolRows{display:flex;flex-direction:column;gap:8px;align-items:center;min-height:55px}.schoolRow{font-size:23px;font-weight:750;font-variant-numeric:tabular-nums;background:#fff;padding:7px 15px;border-radius:10px}.schoolRow.schoolActive{background:#dcf9e9;color:#116a4c}.annotatedTop{height:35px;text-align:right;padding-right:12%;color:#225ec1;font-size:18px;font-weight:800}.annotatedBoard .horizontalProblem{font-size:30px}.horizontalCarry{background:#dceaff;border-radius:7px;padding:2px 8px}.settingsStrip select{max-width:220px}
 </style></head><body>
-<header><div><span><span class="logo">📘 수학선생님</span> <span class="version">V3.5</span></span><nav class="tabs"><button id="tabStudy" class="active" onclick="switchPage('study')">공부</button><button id="tabRecord" onclick="switchPage('record')">기록</button><button id="tabSettings" onclick="switchPage('settings')">설정</button></nav></div></header>
+<header><div><span><span class="logo">📘 수학선생님</span> <span class="version">V3.6</span></span><nav class="tabs"><button id="tabStudy" class="active" onclick="switchPage('study')">공부</button><button id="tabRecord" onclick="switchPage('record')">기록</button><button id="tabSettings" onclick="switchPage('settings')">설정</button></nav></div></header>
 <main>
 <section id="studyPage"><div class="card" id="course"><h1>나만의 수학 교실 🌷</h1><p>선생님 설명에 맞춰 칠판에 답이 하나씩 적혀요. 먼저 듣고, 같은 문제를 함께 풀어보세요.</p><h2>오늘은 무엇을 배울까요?</h2><div class="levels" id="levels"></div><p class="muted">한 자리부터 두 자리까지 · 설명 듣기와 직접 풀기</p><button class="primary" style="width:100%" onclick="startLesson()">수업 시작 ▶</button></div>
 <div class="card hidden" id="lesson"><div class="titleline"><h2 id="lessonTitle"></h2><span class="badge" id="lessonBadge">한 문제를 끝까지</span></div><div class="modebar"><button id="modeLecture" class="active" onclick="selectMode('lecture')">📖 선생님 강의</button><button id="modePractice" onclick="selectMode('practice')">✏️ 함께 풀기</button></div><div class="settingsStrip"><label for="layoutSelect">풀이 방법 <select id="layoutSelect" onchange="setProblemLayout(this.value)"><option value="vertical">세로셈</option><option value="convert">가로 → 세로셈</option><option value="school">학교식 가로셈</option><option value="annotated">가로셈 보조표시</option><option value="compare">같은 문제 비교</option></select></label><label>설명 속도 <select id="paceSelect" onchange="setPace(this.value)"><option value="normal">보통</option><option value="slow">천천히 (추천)</option><option value="slower">아주 천천히</option></select></label><span id="modeHint">선생님이 칠판에 차례로 써 줄게요.</span></div><div class="track"><span id="progressFill"></span></div><div class="player" id="board"></div><div class="teacher"><span class="face">👩‍🏫</span><div class="speakerText"><small id="sectionText">오늘의 설명</small><span id="speechText">강의 듣기를 눌러 시작해 보세요.</span></div></div><div class="status" id="status" aria-live="polite"></div><div class="quiz hidden" id="quiz"><h2 id="questionTitle"></h2><div class="choices" id="choices"></div><p class="feedback" id="feedback"></p></div><div class="controls"><button class="primary" id="playButton" onclick="playOrPause()">▶ 강의 듣기</button><button class="secondary" id="repeatButton" onclick="repeatCurrent()">↩ 현재 설명 다시</button><button class="secondary" onclick="restartLesson()">⟲ 처음부터</button></div><div class="controls2"><button class="soft" onclick="previousCue()">← 이전 설명</button><button class="soft" onclick="nextCue()">다음 설명 →</button></div><div class="actionsBottom"><button class="secondary" onclick="goCourses()">다른 단계 선택</button><button class="soft" onclick="nextExample()">비슷한 문제</button></div><p class="footnote">네 가지 풀이를 선택할 수 있어요. 「같은 문제 비교」는 세로셈과 학교식 가로셈을 같은 문제로 연속해서 보여줘요. 가로셈 보조표시는 학교의 표준 필기법이 아니라 이해를 돕는 표시예요. 선생님 강의는 한 칠판에서 이어집니다. 함께 풀기도 선생님이 설명하며 이어지고, 중간 질문에서는 아이의 답을 기다립니다. 잠시 멈추면 화면을 그대로 두며, 이어서 들을 때는 현재 짧은 문장부터 다시 시작할 수 있습니다. 마지막에는 답을 그대로 둔 채 숫자를 강조하며 복습합니다.</p></div></section>
@@ -161,7 +161,12 @@ function makeSchoolCues(p){
      add(`${sum}은 십 하나와 일 ${onesLeft}개로 나눌 수 있습니다. 일의 자리에서 십 하나가 새로 생겼어요.`, '받아올림의 뜻',['ones','carry']);
      put(`${sum} = 10 + ${onesLeft}`,`새로 생긴 10을 십 단위에 합칠 거예요. 일의 자리에는 ${onesLeft}가 남습니다.`,'10과 나머지 나누기',['carry']);
      const fullT=tens+10;
-     put(`${tens} + 10 + ${onesLeft} = ${final}`,`원래 십 단위 ${tens}에 새로 생긴 10을 더하면 ${fullT}입니다. 남은 ${onesLeft}까지 합하면 ${final}입니다.`,'받아올림 합쳐 계산하기',['carry','answer']);
+     add(`이제 원래 있던 십 단위 ${tens}에 새로 생긴 10을 먼저 더합니다.`, '십 단위끼리 더하기',['tens','carry']);
+     add(`${tens} 더하기 10은 얼마일까요?`, '십 단위 계산 질문',['tens','carry'],{ask:{prompt:`${tens} + 10 = ?`,answer:fullT,opts:options(fullT)},questionVoice:`십 단위를 먼저 더해 볼까요? ${tens} 더하기 10은 얼마일까요? 답을 골라 보세요.`});
+     put(`${tens} + 10 = ${fullT}`,`${tens} 더하기 10은 ${fullT}입니다. 십 단위를 모두 합했어요.`,'십 단위 더하기 결과',['tens','carry']);
+     add(`이제 일의 자리에 남아 있는 ${onesLeft}를 더해 볼게요.`, '남은 일의 자리 더하기',['ones']);
+     add(`${fullT} 더하기 ${onesLeft}는 얼마일까요?`, '마지막 일의 자리 질문',['ones'],{ask:{prompt:`${fullT} + ${onesLeft} = ?`,answer:final,opts:options(final)},questionVoice:`마지막으로 남은 ${onesLeft}를 더해요. ${fullT} 더하기 ${onesLeft}는 얼마일까요? 답을 골라 보세요.`});
+     put(`${fullT} + ${onesLeft} = ${final}`,`${fullT}에 남은 ${onesLeft}를 더하면 ${final}입니다. 십 단위를 합하고, 남은 일의 자리까지 더했습니다.`,'일의 자리 더해 정답 완성',['ones','answer']);
    }else{
      put(`${tens} + ${sum} = ${final}`,`일의 자리 합은 ${sum}입니다. 십 단위 ${tens}과 합하면 ${final}입니다.`,'십 단위와 합치기',['answer']);
    }
@@ -259,15 +264,26 @@ function setPace(s){store.settings.pauseMultiplier=({normal:1,slow:1.4,slower:2}
 function pauseLength(ms){return Math.round(ms*(store.settings.pauseMultiplier||1.4))}
 function makeUtterance(s){const u=new SpeechSynthesisUtterance(s);u.lang='ko-KR';u.rate=Number(store.settings.rate)||.83;u.pitch=1;u.volume=1;const selected=speechSynthesis.getVoices().find(v=>v.voiceURI===store.settings.voice);if(selected)u.voice=selected;return u}
 function splitAudio(text){
- // Split by sentence and comma first. This creates actual pauses rather than relying
- // on punctuation, but never split a number away from its Korean grammatical particle.
+ // V3.6: Numbers immediately preceding '입니다' are spoken as their own
+ // utterance. Separating the TTS utterances is more reliable than a comma
+ // or an inserted space on iPad Safari.
  const parts=[];
  const sentences=String(text).match(/[^.!?]+[.!?]?/gu)||[String(text)];
  for(const sentence of sentences){
    const chunks=sentence.split(/[,，]/u);
    for(const chunk of chunks){
      const cleaned=chunk.trim();
-     if(cleaned)parts.push({text:cleaned,pause:260});
+     if(!cleaned)continue;
+     // Keep the numeric value distinct from the closing '입니다'.
+     // Do not modify visible text, mathematical expressions or question prompts.
+     const pieces=cleaned.split(/(\d+)(입니다)/gu);
+     if(pieces.length===1){parts.push({text:cleaned,pause:260});continue}
+     for(let i=0;i<pieces.length;i++){
+       const piece=pieces[i].trim();if(!piece)continue;
+       const numberOnly=/^\d+$/.test(piece);
+       const closing=piece==='입니다';
+       parts.push({text:piece,pause:numberOnly?420:closing?290:170,emphasizeNumber:numberOnly});
+     }
    }
    if(parts.length)parts[parts.length-1].pause=Math.max(parts[parts.length-1].pause,490);
  }
@@ -300,7 +316,9 @@ function speakSegments(text,token,done){
   if(token!==runId||playerState!=='running')return;
   if(index>=fragments.length){done();return}
   const part=fragments[index++];let completed=false;
-  const u=makeUtterance(part.text);activeSpeech=u;
+  const u=makeUtterance(part.text);
+  if(part.emphasizeNumber){u.rate=Math.max(0.65,(Number(store.settings.rate)||.83)*.93);u.pitch=1.04;}
+  activeSpeech=u;
   const complete=()=>{if(completed)return;completed=true;clearTimeout(activeTimer);activeTimer=null;if(token!==runId||playerState!=='running')return;activeDelay=setTimeout(next,pauseLength(part.pause));};
   u.onend=complete;
   u.onerror=()=>{if(token!==runId||playerState!=='running')return;playerState='paused';refreshPlayButton();setStatus('음성이 중단되었어요. 이어서 듣기를 눌러주세요.')};
