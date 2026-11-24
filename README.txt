@@ -1,7 +1,4 @@
-수학선생님 V3.12 — GitHub Pages 업로드용
-
-ZIP 압축을 풀고 index.html, manifest.webmanifest, icon-*.png 등을 기존 저장소에 업로드하세요.
-Safari 접속 주소에 ?v=312를 붙이면 캐시 구분에 도움이 됩니다.
-
-개선: 가로셈 정답칸 네모 두 칸 고정, 답 숫자 쓰기 설명 후 표시, 받아올림 1 표시 타이밍 조정, 기존 학습 기록 보존.
-음성 합성 품질과 재생 타이밍은 아이패드 실기기 확인이 필요합니다.
+수학선생님 V3.14
+GitHub Pages 업로드용: 압축을 풀어 index.html, manifest.webmanifest 및 아이콘 3개를 저장소 최상단에 올리세요.
+기존 localStorage 키 math-teacher-v1을 유지하여 학습 기록을 보존합니다.
+변경: 원래 문제와 계산식의 수 출처 연결, 문제풀이 질문 미리 표시, 답 평가 후 계산식 완성, 복습 같은 강조 규칙.
