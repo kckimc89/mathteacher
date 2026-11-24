@@ -5,7 +5,7 @@
 
 .schoolRows{display:flex;flex-direction:column;gap:8px;align-items:center;min-height:55px}.schoolRow{font-size:23px;font-weight:750;font-variant-numeric:tabular-nums;background:#fff;padding:7px 15px;border-radius:10px}.schoolRow.schoolActive{background:#dcf9e9;color:#116a4c}.annotatedTop{height:35px;text-align:right;padding-right:12%;color:#225ec1;font-size:18px;font-weight:800}.annotatedBoard .horizontalProblem{font-size:30px}.horizontalCarry{background:#dceaff;border-radius:7px;padding:2px 8px}.settingsStrip select{max-width:260px}.annotatedSteps{margin:12px auto 4px;display:flex;flex-direction:column;gap:7px;align-items:center;min-height:22px}.annotatedStep{min-width:65%;max-width:100%;text-align:center;background:#fff;border:1px solid #e1e9f6;border-radius:10px;padding:7px 10px;font-size:21px;font-weight:750;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.annotatedStep.current{background:#dcf9e9;border-color:#94dab5;color:#116a4c}.annotatedNote{font-size:12px;color:#536881;text-align:center;margin-top:5px}
 
-/* V3.14: fixed question + accumulating written work */
+/* V3.15: fixed question + accumulating written work */
 .classroomGrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1.2fr);gap:14px;align-items:stretch;min-height:285px}
 .questionPane,.workPane{border-radius:15px;padding:13px;border:1px solid #dce5f4;min-width:0}
 .questionPane{background:#eaf2ff;display:flex;flex-direction:column;justify-content:flex-start}
@@ -27,23 +27,23 @@
 .workIntro{color:#536881;font-size:16px;line-height:1.5;padding:12px}
 @media(max-width:650px){.classroomGrid{grid-template-columns:1fr;gap:9px}.questionPane{position:sticky;top:59px;z-index:2;padding:9px}.questionBody{min-height:100px}.questionPane .digit{font-size:42px;min-height:51px}.questionPane .upper{height:28px}.questionPane .upper .digit{font-size:18px;min-height:25px}.questionPane .placeheads{font-size:11px;margin-bottom:0}.questionPane .borrowNote{font-size:12px;min-height:16px}.questionPane .line,.questionPane .placeheads{grid-template-columns:31px 63px 63px}.questionPane .rule{max-width:147px;margin:0 auto;transform:translateX(16px)}.questionPane .fixedEquation{font-size:35px}.workBody{max-height:275px;min-height:110px}.workRow{font-size:19px}}
 
-/* V3.14: reliable answer separator, independent of result updates. */
+/* V3.15: reliable answer separator, independent of result updates. */
 .questionPane .rule{display:block!important;box-sizing:border-box;width:180px!important;max-width:none!important;height:0!important;min-height:0!important;border:0!important;border-top:4px solid #31435e!important;opacity:1!important;margin:4px auto 8px!important;transform:translateX(22px)!important;flex-shrink:0}
 .workRow.reviewFocus{background:#d8eaff!important;border:2px solid #3671df!important;color:#163f8c!important;box-shadow:0 0 0 2px #3671df22}
 .workPane.reviewing{border-color:#6d9aea;background:#f8fbff}
 @media(max-width:650px){.questionPane .rule{width:147px!important;transform:translateX(16px)!important}}
 
-/* V3.14: answer cells remain visible throughout the entire horizontal lesson. */
+/* V3.15: answer cells remain visible throughout the entire horizontal lesson. */
 .fixedEquation{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;overflow:visible;white-space:nowrap}
 .answerBoxes{display:inline-flex;align-items:center;gap:5px;vertical-align:middle;white-space:nowrap}
 .answerCell{display:inline-flex;position:relative;align-items:center;justify-content:center;min-width:48px;height:63px;padding:0 4px;border:2.5px solid #97a9c5;border-radius:12px;background:#fff;color:transparent;font-weight:850;font-variant-numeric:tabular-nums}
 .answerCell.filled{background:#e1f8eb;border-color:#6bc59f;color:#14764e}
 .answerCell.answerFocus{box-shadow:0 0 0 4px #bfd6ff;border-color:#3775df}
-.answerCarryMark{position:absolute;left:50%;bottom:calc(100% + 3px);transform:translateX(-50%);background:#dbeafe;border:1.5px solid #74a5ed;border-radius:6px;padding:0px 5px;font-size:19px;line-height:1.4;color:#225ec1;font-weight:900}
+.answerCarryMark{position:absolute;left:50%;bottom:calc(100% + 3px);transform:translateX(-50%);background:#fff0d8;border:1.5px solid #e6a755;border-radius:6px;padding:0px 5px;font-size:19px;line-height:1.4;color:#a45700;font-weight:900}
 .answerAux{font-size:14px;line-height:1.5}
 @media(max-width:650px){.fixedEquation{gap:5px;font-size:29px!important}.answerCell{height:47px;min-width:37px;border-radius:9px}.answerCarryMark{font-size:16px}}
 
-/* V3.14: the horizontal question and its converted vertical equation remain together on the left. */
+/* V3.15: the horizontal question and its converted vertical equation remain together on the left. */
 .convertOriginal{display:flex;justify-content:center;align-items:center;min-height:83px}
 .convertOriginal .fixedEquation{font-size:clamp(25px,3vw,36px)}
 .convertDivider{text-align:center;color:#536881;font-size:13px;font-weight:800;margin:9px auto 1px;border-top:1px dashed #b9cbe8;padding-top:9px;width:90%}
@@ -57,29 +57,32 @@
 .convertVertical .borrowNote{font-size:12px;min-height:18px}
 @media(max-width:650px){.convertOriginal .fixedEquation{font-size:29px}.convertVertical .digit{font-size:35px;min-height:46px}.convertVertical .placeheads,.convertVertical .line{grid-template-columns:30px 57px 57px}.convertVertical .rule{width:139px!important;transform:translateX(14px)!important}}
 
-/* V3.14 numeric provenance and interactive equation */
+/* V3.15 numeric provenance and interactive equation */
 .sourceNum{display:inline-block;border-radius:5px;padding:0 2px;border-bottom:3px solid transparent;font-weight:850}
-.source-first{color:#2057bf!important;border-bottom-color:#6f9cf0!important}
-.source-second{color:#16835b!important;border-bottom-color:#7ed3a8!important}
-.source-carry{color:#ab5800!important;border-bottom-color:#f3ad55!important}
+.source-first,.source-second,.source-carry{color:inherit;border-bottom-color:transparent}
+/* Only the CURRENT digits on the original board change color. */
+.questionPane .sourceNum.currentNum.source-first,.questionPane .digit.currentNum.source-first{color:#2057bf!important;border-bottom-color:#6f9cf0!important}
+.questionPane .sourceNum.currentNum.source-second,.questionPane .digit.currentNum.source-second{color:#16835b!important;border-bottom-color:#7ed3a8!important}
+.questionPane .sourceNum.currentNum.source-carry,.questionPane .digit.currentNum.source-carry{color:#ab5800!important;border-bottom-color:#f3ad55!important}
 .sourceNum.currentNum{background:#fff2ad;outline:2px solid #e6ad39;outline-offset:2px}
-.questionPane .digit.source-first{color:#2057bf}
-.questionPane .digit.source-second{color:#16835b}
-.questionPane .digit.source-carry{color:#ab5800}
 .questionPane .digit.currentNum{background:#fff2ad!important;outline:2px solid #e6ad39!important}
+/* The matching calculation retains source colors, not the introductory question. */
+.workRow .sourceNum.source-first{color:#2057bf!important;border-bottom-color:#6f9cf0!important}
+.workRow .sourceNum.source-second{color:#16835b!important;border-bottom-color:#7ed3a8!important}
+.workRow .sourceNum.source-carry{color:#ab5800!important;border-bottom-color:#f3ad55!important}
 .workRow.questionWork{position:sticky;bottom:0;margin-top:8px;background:#fff4d3;border:2px solid #dfad43;color:#263b5c;font-size:23px;box-shadow:0 2px 7px #0001}
 .workRow .sourceNum{white-space:nowrap}
 .workAnswer{color:#137854;font-weight:900}
 .workPane.reviewing .workRow.reviewFocus{outline:2px solid #3271e2;outline-offset:0}
 @media(max-width:650px){.workRow.questionWork{font-size:20px}}
 </style></head><body>
-<header><div><span><span class="logo">📘 수학선생님</span> <span class="version">V3.14</span></span><nav class="tabs"><button id="tabStudy" class="active" onclick="switchPage('study')">공부</button><button id="tabRecord" onclick="switchPage('record')">기록</button><button id="tabSettings" onclick="switchPage('settings')">설정</button></nav></div></header>
+<header><div><span><span class="logo">📘 수학선생님</span> <span class="version">V3.15</span></span><nav class="tabs"><button id="tabStudy" class="active" onclick="switchPage('study')">공부</button><button id="tabRecord" onclick="switchPage('record')">기록</button><button id="tabSettings" onclick="switchPage('settings')">설정</button></nav></div></header>
 <main>
 <section id="studyPage"><div class="card" id="course"><h1>나만의 수학 교실 🌷</h1><p>선생님 설명에 맞춰 칠판에 답이 하나씩 적혀요. 먼저 듣고, 같은 문제를 함께 풀어보세요.</p><h2>오늘은 무엇을 배울까요?</h2><div class="levels" id="levels"></div><p class="muted">한 자리부터 두 자리까지 · 설명 듣기와 직접 풀기</p><button class="primary" style="width:100%" onclick="startLesson()">수업 시작 ▶</button></div>
 <div class="card hidden" id="lesson"><div class="titleline"><h2 id="lessonTitle"></h2><span class="badge" id="lessonBadge">한 문제를 끝까지</span></div><div class="modebar"><button id="modeLecture" class="active" onclick="selectMode('lecture')">📖 선생님 강의</button><button id="modePractice" onclick="selectMode('practice')">✏️ 함께 풀기</button></div><div class="settingsStrip"><label for="layoutSelect">풀이 방법 <select id="layoutSelect" onchange="setProblemLayout(this.value)"><option value="vertical">세로셈</option><option value="convert">가로 → 세로셈</option><option value="school">십의 자리부터 가로셈</option><option value="annotated">일의 자리부터 가로셈</option><option value="compare">같은 문제 비교</option></select></label><label>설명 속도 <select id="paceSelect" onchange="setPace(this.value)"><option value="normal">보통</option><option value="slow">천천히 (추천)</option><option value="slower">아주 천천히</option></select></label><span id="modeHint">선생님이 칠판에 차례로 써 줄게요.</span></div><div class="track"><span id="progressFill"></span></div><div class="player" id="board"></div><div class="teacher"><span class="face">👩‍🏫</span><div class="speakerText"><small id="sectionText">오늘의 설명</small><span id="speechText">강의 듣기를 눌러 시작해 보세요.</span></div></div><div class="status" id="status" aria-live="polite"></div><div class="quiz hidden" id="quiz"><h2 id="questionTitle"></h2><div class="choices" id="choices"></div><p class="feedback" id="feedback"></p></div><div class="controls"><button class="primary" id="playButton" onclick="playOrPause()">▶ 강의 듣기</button><button class="secondary" id="repeatButton" onclick="repeatCurrent()">↩ 현재 설명 다시</button><button class="secondary" onclick="restartLesson()">⟲ 처음부터</button></div><div class="controls2"><button class="soft" onclick="previousCue()">← 이전 설명</button><button class="soft" onclick="nextCue()">다음 설명 →</button></div><div class="actionsBottom"><button class="secondary" onclick="goCourses()">다른 단계 선택</button><button class="soft" onclick="nextExample()">새 문제 계속 풀기</button></div><p class="footnote">네 가지 풀이를 선택할 수 있어요. 「새 문제 계속 풀기」는 같은 단계에서 다른 숫자로 새 문제를 만들어요. 「가로 → 세로셈」은 왼쪽에 가로식과 세로식을 함께 보여주고 답을 동시에 적어요. 「같은 문제 비교」는 두 풀이를 이어서 보여줘요. 「일의 자리부터 가로셈」의 작은 받아올림·받아내림 표시는 이해를 돕는 앱 전용 표기예요. 선생님 강의는 한 칠판에서 이어집니다. 함께 풀기도 선생님이 설명하며 이어지고, 중간 질문에서는 아이의 답을 기다립니다. 잠시 멈추면 화면을 그대로 두며, 이어서 들을 때는 현재 짧은 문장부터 다시 시작할 수 있습니다. 마지막에는 원래 문제와 오른쪽 풀이 계산식을 함께 강조하며 복습합니다.</p></div></section>
 <section class="card hidden" id="recordPage"><h1>나의 학습 기록</h1><div class="statrow"><div><strong id="statLessons">0</strong><span>완료 수업</span></div><div><strong id="statAttempts">0</strong><span>함께 푼 질문</span></div><div><strong id="statSolved">0</strong><span>스스로 맞힌 질문</span></div></div><p class="muted" id="recordSummary">배운 내용과 함께 푼 기록을 간단히 보여줘요.</p><div id="history"></div><div class="actionsBottom"><button class="secondary" onclick="exportData()">기록 백업</button><button class="secondary" onclick="document.getElementById('importFile').click()">기록 복원</button><button class="secondary" onclick="resetRecords()">기록 리셋</button></div><input id="importFile" class="hidden" type="file" accept="application/json" onchange="importData(event)"></section>
 <section class="card hidden" id="settingsPage"><h1>부모 설정</h1><div class="settingrow"><label for="soundOn">한국어 음성 설명</label><input type="checkbox" id="soundOn" onchange="saveSettings()"></div><div class="settingrow"><label for="voiceRate">기본 음성 속도</label><select id="voiceRate" onchange="saveSettings()"><option value="0.72">느리게</option><option value="0.83">천천히 (추천)</option><option value="0.95">보통</option></select></div><div class="settingrow"><label for="voiceSelect">한국어 목소리</label><select id="voiceSelect" onchange="saveSettings()"><option value="">기기 기본</option></select></div><div class="settingrow"><label for="numberPause">숫자 뒤 아주 짧게 쉬기</label><input type="checkbox" id="numberPause" onchange="saveSettings()"></div><p class="footnote">같은 웹사이트에서 업데이트하면 기존 학습 기록을 유지합니다. 음성 재생은 iPad Safari의 음성 합성 지원에 따라 달라질 수 있습니다. 재생을 누른 뒤에도 소리가 없다면 설정의 음성과 기기 음량을 확인해 주세요.</p><button class="secondary" onclick="testVoice()">🔊 목소리 시험</button></section>
-<footer>수학선생님 · V3.14 · 설치 없이 사용하는 학습 웹앱</footer></main>
+<footer>수학선생님 · V3.15 · 설치 없이 사용하는 학습 웹앱</footer></main>
 <script>
 'use strict';
 const KEY='math-teacher-v1';
@@ -241,7 +244,7 @@ function makeCues(p){
  }
  return makeVerticalCues(p);
 }
-// V3.14: In the ones-first horizontal method, retain the original horizontal
+// V3.15: In the ones-first horizontal method, retain the original horizontal
 // equation, but also show every intermediate calculation as the narration
 // reaches it. The same cue is used in lecture and practice, so a quiz never
 // reveals the answer before the child chooses one.
@@ -378,7 +381,7 @@ function selectMode(newMode){
  if(mode==='practice')startPractice();
 }
 function updateMode(){$('modeLecture').classList.toggle('active',mode==='lecture');$('modePractice').classList.toggle('active',mode==='practice');$('modeHint').textContent=mode==='lecture'?'말과 칠판이 함께 진행되고 마지막에는 복습해요.':'선생님이 설명하며 질문하고, 답을 고를 때까지 기다려요.';$('playButton').textContent=mode==='lecture'?'▶ 강의 듣기':'▶ 함께 풀기 시작'}
-// V3.14 unified classroom: the original question stays in the left panel.
+// V3.15 unified classroom: the original question stays in the left panel.
 // Only confirmed answer digits are filled in. All working lines accumulate on the right.
 function resultCells(p,view){
  const hot=activeProblemNumbers(p,{view,section:(cues[cursor]||{}).section||''});
@@ -394,7 +397,7 @@ function resultCells(p,view){
  <div class="line">${cell(p.kind==='add'?'+':'−','op','op')}${cell(p.B||'','bT')}${cell(p.y,'bO')}</div>
  <div class="rule"></div><div class="line"><div></div>${cell(tens,'rT','result '+(!view.tens?'blank':''))}${cell(ones,'rO','result '+(!view.ones?'blank':''))}</div>`;
 }
-// V3.14: Two permanently visible boxes for horizontal answers. A digit is
+// V3.15: Two permanently visible boxes for horizontal answers. A digit is
 // inserted only when that PLACE VALUE has actually been established.
 function answerBoxes(p,digits={}){
  const width=p.total>=10?2:1;
@@ -469,7 +472,7 @@ function markSchoolDigits(items,p){
  }
  return items;
 }
-// V3.14: consistent source-color connections across the original problem,
+// V3.15: consistent source-color connections across the original problem,
 // right-side working, interactive questions and spoken review. The colors
 // encode SOURCE, not the value of a digit: first operand, second operand,
 // and borrowed/carried ten retain their identity in every layout.
@@ -509,13 +512,27 @@ function colorEquation(text,p,c){
  ` <span class="workSymbol">=</span> <span class="workAnswer">${esc(rhs)}</span>`;
 }
 function activeProblemNumbers(p,c){
- const hot=new Set(c.view.hot||[]);const sec=c.section;
- if(sec==='일의 자리 계산'||sec.includes('일의 자리 계산')||sec.includes('일의 자리 살펴보기')||sec==='일의 자리 계산 질문'){
-  hot.add('aO');hot.add('bO');
- }
- if(sec.includes('십의 자리')||sec.includes('십 단위')){
+ // No coloring at all before a specific computation is underway.
+ // In particular the method's TITLE contains "십의 자리", which is not an instruction
+ // to highlight the original operands.
+ const sec=c.section||'';
+ const noFocus=new Set(['오늘의 문제','첫 번째 · 세로셈','두 번째 · 십의 자리부터 가로셈',
+  '십의 자리부터 가로셈','일의 자리부터 가로셈','수업 소개',
+  '가로셈 살펴보기','풀이 복습 시작','움직이는 풀이 복습','두 방법 비교']);
+ if(noFocus.has(sec))return new Set();
+ const hot=new Set(c.view?.hot||[]);
+ if(sec==='십 단위와 일 단위로 나누기'||sec==='수 나누기 확인'){
+  hot.add('bT');hot.add('bO');
+ }else if(sec==='십 단위 계산 질문'||sec==='십 단위 계산 확인'){
   hot.add('aT');hot.add('bT');
-  if(p.carry&&(c.view.carry||c.view.schoolDigits?.carry))hot.add('carry');
+ }else if(sec==='일의 자리 살펴보기'||sec==='일의 자리 결과'||sec==='일의 자리 계산 질문'||sec==='일의 자리 계산'){
+  hot.add('aO');hot.add('bO');
+ }else if(sec==='받아올림의 뜻'||sec==='10과 나머지 나누기'){
+  hot.add('aO');hot.add('bO');
+ }else if(sec==='십의 자리 계산'||sec==='십의 자리 확인'||sec==='십의 자리 쓰기'){
+  hot.add('aT');hot.add('bT');
+ }else if(sec==='십 단위끼리 더하기'||sec==='십 단위 더하기 결과'||sec==='십 단위 계산 질문'){
+  hot.add('aT');hot.add('bT');
  }
  if(sec.startsWith('복습') && Number.isInteger(c.reviewRowIndex)){
   const row=(c.view.schoolRows||c.view.workRows||[])[c.reviewRowIndex]||'';
@@ -523,6 +540,17 @@ function activeProblemNumbers(p,c){
   if(row.includes('받아올림')||row.includes(' = 10 + '))hot.add('carry');
  }
  return hot;
+}
+// On horizontal answers, the carry is a temporary note ABOVE the tens box.
+// It is never printed underneath the original equation, and it disappears
+// after the tens digit has been written. Review can briefly recall it.
+function showAnswerCarry(p,view,c){
+ if(!p.carry||!view.carry)return false;
+ const section=c.section||'';
+ const reviewing=section.startsWith('복습');
+ if(reviewing)return section.includes('받아올림')||section.includes('십의 자리')||
+   !!(view.hot||[]).includes('carry');
+ return !view.tens;
 }
 
 function renderBoard(view,layout='vertical',c=cues[cursor]||{section:''}){
@@ -533,13 +561,12 @@ function renderBoard(view,layout='vertical',c=cues[cursor]||{section:''}){
  if(isVertical){
    left=resultCells(p,view);
  }else if(problemLayout==='annotated'){
-   left=horizontal({ones:!!view.ones,tens:!!view.tens,complete:!!view.schoolFinal});
-   if(view.carry&&p.carry)left+=`<div class="answerAux">받아올림 <strong>1</strong> ↑</div>`;
+   left=horizontal({ones:!!view.ones,tens:!!view.tens,complete:!!view.schoolFinal,carry:showAnswerCarry(p,view,c)});
    if(view.borrow&&p.borrow)left+=`<div class="answerAux">십의 자리 ${p.A} → ${p.A-1}, 일의 자리 ${p.x} → ${p.x+10}</div>`;
  }else if(problemLayout==='convert'){
    const converted=layout!=='horizontal';
    const done=layout==='horizontalDone';
-   left=`<div class="convertOriginal">${horizontal({ones:!!view.ones,tens:!!view.tens,complete:done})}</div>`;
+   left=`<div class="convertOriginal">${horizontal({ones:!!view.ones,tens:!!view.tens,complete:done,carry:showAnswerCarry(p,view,c)})}</div>`;
    if(converted){
      left+=`<div class="convertDivider">세로로 옮겨서 계산해요</div><div class="convertVertical">${resultCells(p,view)}</div>`;
    }
@@ -668,7 +695,7 @@ function setPace(s){store.settings.pauseMultiplier=({normal:1,slow:1.4,slower:2}
 function pauseLength(ms){return Math.round(ms*(store.settings.pauseMultiplier||1.4))}
 function makeUtterance(s){const u=new SpeechSynthesisUtterance(s);u.lang='ko-KR';u.rate=Number(store.settings.rate)||.83;u.pitch=1;u.volume=1;const selected=speechSynthesis.getVoices().find(v=>v.voiceURI===store.settings.voice);if(selected)u.voice=selected;return u}
 function splitAudio(text){
- // V3.14: Numbers immediately preceding '입니다' are spoken as their own
+ // V3.15: Numbers immediately preceding '입니다' are spoken as their own
  // utterance. Separating the TTS utterances is more reliable than a comma
  // or an inserted space on iPad Safari.
  const parts=[];
@@ -785,7 +812,7 @@ function goCourses(){stopPlayback();$('course').classList.remove('hidden');$('le
 function nextExample(){stopPlayback();generatedProblem=generateFreshProblem(level);resetLesson();if(mode==='practice')startPractice()}
 function switchPage(p){stopPlayback();$('studyPage').classList.toggle('hidden',p!=='study');$('recordPage').classList.toggle('hidden',p!=='record');$('settingsPage').classList.toggle('hidden',p!=='settings');['Study','Record','Settings'].forEach(name=>$('tab'+name).classList.toggle('active',name.toLowerCase()===p));if(p==='record')renderRecords();if(p==='settings')renderSettings();window.scrollTo(0,0)}
 function renderRecords(){const attempts=Number(store.attempts||0), solved=Number(store.solved||0), lessons=Number(store.lessons||0);$('statLessons').textContent=lessons;$('statAttempts').textContent=attempts;$('statSolved').textContent=solved;const accuracy=attempts?Math.round(solved/attempts*100):0;$('recordSummary').textContent=attempts?`함께 풀기에서 ${attempts}개의 질문에 답했고, 그중 ${solved}개를 스스로 맞혔어요. 정답 비율은 약 ${accuracy}%입니다.`:'아직 함께 푼 질문 기록이 없어요. 선생님 강의나 함께 풀기를 시작해 보세요.';$('history').innerHTML=store.history.length?store.history.map(h=>`<p>${esc(h.when||'')} · ${esc(h.level||'수학 연습')} · ${h.mode==='practice'?'함께 풀기':'선생님 강의'}${h.layout?` · ${esc(h.layout)}`:''}${h.problem?` · ${esc(h.problem)}`:''}</p>`).join(''):'<p>아직 학습 기록이 없어요.</p>'}
-function exportData(){const blob=new Blob([JSON.stringify({app:'math-teacher',version:'3.14',data:store},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='math_records.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500)}
+function exportData(){const blob=new Blob([JSON.stringify({app:'math-teacher',version:'3.15',data:store},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='math_records.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500)}
 function importData(evt){const f=evt.target.files?.[0];if(!f)return;const reader=new FileReader();reader.onload=()=>{try{const o=JSON.parse(reader.result);if(o.app!=='math-teacher'||!o.data)throw Error('format');if(!confirm('현재 기록을 백업 기록으로 바꿀까요?'))return;store={...defaultStore(),...o.data,settings:{...defaults.settings,...o.data.settings}};persist();renderSettings();alert('기록을 복원했습니다.')}catch{alert('올바른 학습 기록 파일인지 확인해 주세요.')}finally{evt.target.value=''}};reader.readAsText(f)}
 function resetRecords(){if(!confirm('학습 기록을 모두 지울까요? 설정은 그대로 두고 기록만 초기화합니다.'))return;const settings={...store.settings};store=defaultStore();store.settings=settings;persist();renderRecords();setStatus('학습 기록을 리셋했어요.')}
 function saveSettings(){store.settings.sound=$('soundOn').checked;store.settings.rate=Number($('voiceRate').value);store.settings.voice=$('voiceSelect').value;store.settings.numberPause=$('numberPause').checked;persist();if(!store.settings.sound)stopPlayback()}
