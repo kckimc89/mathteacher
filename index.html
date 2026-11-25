@@ -5,7 +5,7 @@
 
 .schoolRows{display:flex;flex-direction:column;gap:8px;align-items:center;min-height:55px}.schoolRow{font-size:23px;font-weight:750;font-variant-numeric:tabular-nums;background:#fff;padding:7px 15px;border-radius:10px}.schoolRow.schoolActive{background:#dcf9e9;color:#116a4c}.annotatedTop{height:35px;text-align:right;padding-right:12%;color:#225ec1;font-size:18px;font-weight:800}.annotatedBoard .horizontalProblem{font-size:30px}.horizontalCarry{background:#dceaff;border-radius:7px;padding:2px 8px}.settingsStrip select{max-width:260px}.annotatedSteps{margin:12px auto 4px;display:flex;flex-direction:column;gap:7px;align-items:center;min-height:22px}.annotatedStep{min-width:65%;max-width:100%;text-align:center;background:#fff;border:1px solid #e1e9f6;border-radius:10px;padding:7px 10px;font-size:21px;font-weight:750;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.annotatedStep.current{background:#dcf9e9;border-color:#94dab5;color:#116a4c}.annotatedNote{font-size:12px;color:#536881;text-align:center;margin-top:5px}
 
-/* V3.25: fixed question + accumulating written work */
+/* V3.26: fixed question + accumulating written work */
 .classroomGrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1.2fr);gap:14px;align-items:stretch;min-height:285px}
 .questionPane,.workPane{border-radius:15px;padding:13px;border:1px solid #dce5f4;min-width:0}
 .questionPane{background:#eaf2ff;display:flex;flex-direction:column;justify-content:flex-start}
@@ -27,13 +27,13 @@
 .workIntro{color:#536881;font-size:16px;line-height:1.5;padding:12px}
 @media(max-width:650px){.classroomGrid{grid-template-columns:1fr;gap:9px}.questionPane{position:sticky;top:59px;z-index:2;padding:9px}.questionBody{min-height:100px}.questionPane .digit{font-size:42px;min-height:51px}.questionPane .upper{height:28px}.questionPane .upper .digit{font-size:18px;min-height:25px}.questionPane .placeheads{font-size:11px;margin-bottom:0}.questionPane .borrowNote{font-size:12px;min-height:16px}.questionPane .line,.questionPane .placeheads{grid-template-columns:31px 63px 63px}.questionPane .rule{max-width:147px;margin:0 auto;transform:translateX(16px)}.questionPane .fixedEquation{font-size:35px}.workBody{max-height:275px;min-height:110px}.workRow{font-size:19px}}
 
-/* V3.25: reliable answer separator, independent of result updates. */
+/* V3.26: reliable answer separator, independent of result updates. */
 .questionPane .rule{display:block!important;box-sizing:border-box;width:180px!important;max-width:none!important;height:0!important;min-height:0!important;border:0!important;border-top:4px solid #31435e!important;opacity:1!important;margin:4px auto 8px!important;transform:translateX(22px)!important;flex-shrink:0}
 .workRow.reviewFocus{background:#d8eaff!important;border:2px solid #3671df!important;color:#163f8c!important;box-shadow:0 0 0 2px #3671df22}
 .workPane.reviewing{border-color:#6d9aea;background:#f8fbff}
 @media(max-width:650px){.questionPane .rule{width:147px!important;transform:translateX(16px)!important}}
 
-/* V3.25: answer cells remain visible throughout the entire horizontal lesson. */
+/* V3.26: answer cells remain visible throughout the entire horizontal lesson. */
 .fixedEquation{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;overflow:visible;white-space:nowrap}
 .answerBoxes{display:inline-flex;align-items:center;gap:5px;vertical-align:middle;white-space:nowrap}
 .answerCell{display:inline-flex;position:relative;align-items:center;justify-content:center;min-width:48px;height:63px;padding:0 4px;border:2.5px solid #97a9c5;border-radius:12px;background:#fff;color:transparent;font-weight:850;font-variant-numeric:tabular-nums}
@@ -43,7 +43,7 @@
 .answerAux{font-size:14px;line-height:1.5}
 @media(max-width:650px){.fixedEquation{gap:5px;font-size:29px!important}.answerCell{height:47px;min-width:37px;border-radius:9px}.answerCarryMark{font-size:16px}}
 
-/* V3.25: the horizontal question and its converted vertical equation remain together on the left. */
+/* V3.26: the horizontal question and its converted vertical equation remain together on the left. */
 .convertOriginal{display:flex;justify-content:center;align-items:center;min-height:83px}
 .convertOriginal .fixedEquation{font-size:clamp(25px,3vw,36px)}
 .convertDivider{text-align:center;color:#536881;font-size:13px;font-weight:800;margin:9px auto 1px;border-top:1px dashed #b9cbe8;padding-top:9px;width:90%}
@@ -57,7 +57,7 @@
 .convertVertical .borrowNote{font-size:12px;min-height:18px}
 @media(max-width:650px){.convertOriginal .fixedEquation{font-size:29px}.convertVertical .digit{font-size:35px;min-height:46px}.convertVertical .placeheads,.convertVertical .line{grid-template-columns:30px 57px 57px}.convertVertical .rule{width:139px!important;transform:translateX(14px)!important}}
 
-/* V3.25 numeric provenance and interactive equation */
+/* V3.26 numeric provenance and interactive equation */
 .sourceNum{display:inline-block;border-radius:5px;padding:0 2px;border-bottom:3px solid transparent;font-weight:850}
 .source-first,.source-second,.source-carry{color:inherit;border-bottom-color:transparent}
 /* Only the CURRENT digits on the original board change color. */
@@ -76,7 +76,7 @@
 .workPane.reviewing .workRow.reviewFocus{outline:2px solid #3271e2;outline-offset:0}
 @media(max-width:650px){.workRow.questionWork{font-size:20px}}
 
-/* V3.25 — standalone, answer-hidden practice with accessible keypad */
+/* V3.26 — standalone, answer-hidden practice with accessible keypad */
 .modebar{gap:7px}.modebar button{font-size:15px;padding:8px 5px}
 #lesson.soloActive .settingsStrip,#lesson.soloActive .track,#lesson.soloActive .player,#lesson.soloActive .teacher,#lesson.soloActive .status,#lesson.soloActive .quiz,#lesson.soloActive .controls,#lesson.soloActive .controls2,#lesson.soloActive .actionsBottom,#lesson.soloActive .footnote{display:none!important}
 .soloPanel{border:2px solid #bfd5fb;border-radius:18px;background:#f8fbff;padding:20px;margin:18px 0}
@@ -95,7 +95,7 @@
 .soloResult span{font-size:16px}
 @media(max-width:520px){.soloPanel{padding:10px}.soloBox{min-width:42px;min-height:54px}.soloKeypad button{min-height:65px}.modebar button{font-size:13px}}
 
-/* V3.25 — independently selectable horizontal / vertical / alternating questions */
+/* V3.26 — independently selectable horizontal / vertical / alternating questions */
 .soloFormatGroup{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;margin:12px 0 3px}
 .soloFormatGroup .formatLabel{font-size:16px;font-weight:800;color:#345478;margin-right:3px}
 .soloFormatGroup button{border:2px solid #bfd1ea;background:#fff;color:#274365;border-radius:12px;min-height:43px;padding:9px 15px;font-weight:800}
@@ -109,7 +109,7 @@
 .soloVertical .soloVerticalRow.resultRow{min-height:69px}
 @media(max-width:520px){.soloVertical{font-size:40px}.soloVerticalRow{grid-template-columns:32px 53px 53px;min-height:50px}.soloVerticalRule{width:118px;margin-left:32px}.soloVertical .soloBox{min-width:44px;min-height:55px;font-size:37px}.soloFormatGroup button{padding:8px 10px}}
 
-/* V3.25 — selectable tens / ones slots, identical in horizontal and vertical practice */
+/* V3.26 — selectable tens / ones slots, identical in horizontal and vertical practice */
 .soloPlaceHint{text-align:center;color:#355c97;font-size:16px;font-weight:750;min-height:24px;margin:0 auto 12px}
 .soloBox{cursor:pointer;font:inherit;font-weight:900;padding:0;appearance:none;-webkit-appearance:none;touch-action:manipulation}
 .soloBox.selected,.soloVertical .soloBox.selected{border-color:#c07a00!important;background:#fff0b3!important;box-shadow:0 0 0 4px #ffda73!important;outline:none}
@@ -117,7 +117,7 @@
 .soloBox{position:relative;z-index:1;-webkit-tap-highlight-color:transparent}.soloBox.selected{z-index:2}
 .soloKeypad button{-webkit-tap-highlight-color:transparent}
 .soloBox:disabled{cursor:default;opacity:1;-webkit-text-fill-color:#176d4a}
-/* V3.25 — make first-attempt independent answers an achievement */
+/* V3.26 — make first-attempt independent answers an achievement */
 .firstHall{border:2px solid #e6bd64;border-radius:18px;background:#fff8e6;padding:17px;margin:15px 0 18px;color:#583b12}
 .firstHallHeader{display:flex;align-items:center;gap:12px}.firstHallIcon{font-size:49px;line-height:1}.firstHall h2{font-size:21px;margin:0 0 4px;color:#633c08}.firstHallHeader p{font-size:14px;margin:0;color:#795b31}
 .firstScore{margin:15px 0 10px;text-align:center;background:#fff;border:1px solid #efd7a5;border-radius:14px;padding:13px 6px}.firstScore strong{display:block;font-size:clamp(43px,8vw,68px);font-variant-numeric:tabular-nums;color:#a96200;line-height:1.1}.firstScore span{font-size:18px;font-weight:850;color:#6a4816}
@@ -127,7 +127,7 @@
 .soloResult.firstWin{background:#fff2d3;border-color:#e6b75e}.soloResult.firstWin strong{color:#995100;font-size:24px}.soloResult.firstWin .awardLine{font-size:17px;font-weight:850;color:#9b5900}
 @media(max-width:520px){.firstHall{padding:12px}.firstHallIcon{font-size:40px}.firstHall h2{font-size:19px}.firstMini{font-size:14px}}
 
-/* V3.25: Pencil notes are a separate transparent surface above locked problems. */
+/* V3.26: Pencil notes are a separate transparent surface above locked problems. */
 .soloWritingArea{position:relative;isolation:isolate;min-height:240px;border:2px dashed #b8cce8;border-radius:17px;background:#fff;margin:13px auto 10px;max-width:780px;overflow:hidden}
 .soloWritingArea.verticalNotes{min-height:350px}
 .soloWritingArea .soloEquation{position:relative;z-index:3;margin:0;min-height:240px;padding:62px 14px 40px;pointer-events:none;user-select:none;-webkit-user-select:none}
@@ -146,7 +146,7 @@
 .soloMemoActions button{min-height:44px;border-radius:10px;border:1px solid #bfcee3;background:#f8fbff;padding:8px 13px;font-weight:750}
 @media(max-width:520px){.soloWritingArea{min-height:210px}.soloWritingArea.verticalNotes{min-height:330px}.soloWritingArea .soloEquation{min-height:210px;padding:55px 4px 37px}.soloWritingArea.verticalNotes .soloEquation{min-height:330px;padding:82px 2px 38px}.soloMemoToolbar{gap:5px}.soloMemoToolbar button{padding:6px 8px}}
 
-/* V3.25 — iPad portrait: one-row memo tools, 4 × 3 keypad, large writing board. */
+/* V3.26 — iPad portrait: one-row memo tools, 4 × 3 keypad, large writing board. */
 .soloKeypad{grid-template-columns:repeat(4,minmax(0,1fr));max-width:620px;gap:8px;margin:10px auto}
 .soloKeypad button{min-height:58px;font-size:29px}
 .soloKeypad .soloKeyErase{font-size:18px;border-color:#b9c9df;background:#f3f7ff}
@@ -199,7 +199,7 @@
  .soloKeypad .soloKeyErase,.soloKeypad .soloKeyCheck{font-size:14px}
 }
 
-/* V3.25 — larger lesson navigation and format controls, without losing the
+/* V3.26 — larger lesson navigation and format controls, without losing the
    single-screen portrait writing layout. Pen tools remain visually secondary. */
 #lesson.soloActive .titleline h2{font-size:21px;line-height:1.25}
 #lesson.soloActive .modebar button{font-size:17px;font-weight:850;min-height:48px}
@@ -245,7 +245,7 @@
  #lesson.soloActive .modebar button{font-size:14px;min-height:46px}
 }
 
-/* V3.25 — give the writing board the remaining portrait screen height.
+/* V3.26 — give the writing board the remaining portrait screen height.
    Previously the lesson had a fixed height, but its content panel kept its
    intrinsic height, leaving a large unused area below the keypad. */
 @media (min-width:630px) and (max-width:1100px) and (orientation:portrait){
@@ -271,8 +271,39 @@
     height:100%;
   }
 }
+
+/* V3.26: Palm-friendly solo workspace. Only actual controls respond to taps.
+   All labels and unused space ignore Safari long-press selection/callouts. */
+#lesson.soloActive,
+#lesson.soloActive .soloPanel,
+#lesson.soloActive .soloPanel * {
+  -webkit-user-select:none!important;
+  user-select:none!important;
+  -webkit-touch-callout:none!important;
+  -webkit-user-drag:none;
+}
+#lesson.soloActive .soloPanel .soloHeading,
+#lesson.soloActive .soloPanel .soloPlaceHint,
+#lesson.soloActive .soloPanel .soloTries,
+#lesson.soloActive .soloPanel .soloMemoHelp,
+#lesson.soloActive .soloPanel .soloMessage,
+#lesson.soloActive .soloPanel .soloFormatNotice,
+#lesson.soloActive .soloPanel .formatLabel {
+  touch-action:none;
+  -webkit-tap-highlight-color:transparent;
+}
+#lesson.soloActive .soloPanel button,
+#lesson.soloActive .modebar button,
+#lesson.soloActive .soloBox {
+  touch-action:manipulation;
+}
+#lesson.soloActive .soloMemoCanvas {
+  touch-action:none!important;
+  -webkit-user-select:none!important;
+  -webkit-touch-callout:none!important;
+}
 </style></head><body>
-<header><div><span><span class="logo">📘 수학선생님</span> <span class="version">V3.25</span></span><nav class="tabs"><button id="tabStudy" class="active" onclick="switchPage('study')">공부</button><button id="tabRecord" onclick="switchPage('record')">기록</button><button id="tabSettings" onclick="switchPage('settings')">설정</button></nav></div></header>
+<header><div><span><span class="logo">📘 수학선생님</span> <span class="version">V3.26</span></span><nav class="tabs"><button id="tabStudy" class="active" onclick="switchPage('study')">공부</button><button id="tabRecord" onclick="switchPage('record')">기록</button><button id="tabSettings" onclick="switchPage('settings')">설정</button></nav></div></header>
 <main>
 <section id="studyPage"><div class="card" id="course"><h1>나만의 수학 교실 🌷</h1><p>선생님 설명에 맞춰 칠판에 답이 하나씩 적혀요. 먼저 듣고, 같은 문제를 함께 풀어보세요.</p><h2>오늘은 무엇을 배울까요?</h2><div class="levels" id="levels"></div><p class="muted">한 자리부터 두 자리까지 · 설명 듣기와 직접 풀기</p><div class="row"><button class="primary" onclick="startLesson()">수업 시작 ▶</button><button class="secondary" onclick="startLesson();startSolo(true)">🔢 새 문제 혼자 풀기</button></div></div>
 <div class="card hidden" id="lesson"><div class="titleline"><h2 id="lessonTitle"></h2><span class="badge" id="lessonBadge">한 문제를 끝까지</span></div><div class="modebar"><button id="modeLecture" class="active" onclick="selectMode('lecture')">📖 선생님 강의</button><button id="modePractice" onclick="selectMode('practice')">✏️ 함께 풀기</button><button id="modeSolo" onclick="selectMode('solo')">🔢 혼자 풀기</button></div><div id="soloPanel" class="hidden soloPanel" aria-live="polite">
@@ -310,7 +341,7 @@
  <h3 class="firstHistoryTitle">⭐ 첫 번째에 맞힌 문제들</h3><div id="firstHistory" class="firstHistory"></div>
 </section><p class="muted" id="recordSoloSummary">혼자 풀어보기의 결과도 기록해요.</p><p class="muted" id="recordSummary">배운 내용과 함께 푼 기록을 간단히 보여줘요.</p><div id="history"></div><div class="actionsBottom"><button class="secondary" onclick="exportData()">기록 백업</button><button class="secondary" onclick="document.getElementById('importFile').click()">기록 복원</button><button class="secondary" onclick="resetRecords()">기록 리셋</button></div><input id="importFile" class="hidden" type="file" accept="application/json" onchange="importData(event)"></section>
 <section class="card hidden" id="settingsPage"><h1>부모 설정</h1><div class="settingrow"><label for="soundOn">한국어 음성 설명</label><input type="checkbox" id="soundOn" onchange="saveSettings()"></div><div class="settingrow"><label for="voiceRate">기본 음성 속도</label><select id="voiceRate" onchange="saveSettings()"><option value="0.72">느리게</option><option value="0.83">천천히 (추천)</option><option value="0.95">보통</option></select></div><div class="settingrow"><label for="voiceSelect">한국어 목소리</label><select id="voiceSelect" onchange="saveSettings()"><option value="">기기 기본</option></select></div><div class="settingrow"><label for="numberPause">숫자 뒤 아주 짧게 쉬기</label><input type="checkbox" id="numberPause" onchange="saveSettings()"></div><p class="footnote">같은 웹사이트에서 업데이트하면 기존 학습 기록을 유지합니다. 음성 재생은 iPad Safari의 음성 합성 지원에 따라 달라질 수 있습니다. 재생을 누른 뒤에도 소리가 없다면 설정의 음성과 기기 음량을 확인해 주세요.</p><button class="secondary" onclick="testVoice()">🔊 목소리 시험</button></section>
-<footer>수학선생님 · V3.25 · 설치 없이 사용하는 학습 웹앱</footer></main>
+<footer>수학선생님 · V3.26 · 설치 없이 사용하는 학습 웹앱</footer></main>
 <script>
 'use strict';
 const KEY='math-teacher-v1';
@@ -352,6 +383,7 @@ let soloState={digits:['',''],selected:1,tries:0,done:false,showAnswer:false,suc
 let soloDisplayForm='horizontal', soloMixedNext='vertical';
 let memoState={enabled:true,tool:'blue',actions:[],active:null,pointerId:null,activePointerType:null};
 let memoResizeObserver=null;
+let memoLastPenAt=0; // most recent Pencil input, used to reject incidental palm contact
 let store=load(), level=0,exampleIndex=0,mode='lecture',cues=[],cursor=0,playerState='idle',runId=0,activeSpeech=null,activeTimer=null,activeDelay=null,spokenIndex=0,wrong=0,awaitingAnswer=false,finishedRecorded=false,voiceUsed=false,practiceIndexes=[],practiceStep=0,practiceSettling=false;
 const $=id=>document.getElementById(id);const esc=s=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const opWord=kind=>kind==='sub'?'빼기':'더하기';
@@ -491,7 +523,7 @@ function makeCues(p){
  }
  return makeVerticalCues(p);
 }
-// V3.25: In the ones-first horizontal method, retain the original horizontal
+// V3.26: In the ones-first horizontal method, retain the original horizontal
 // equation, but also show every intermediate calculation as the narration
 // reaches it. The same cue is used in lecture and practice, so a quiz never
 // reveals the answer before the child chooses one.
@@ -636,7 +668,7 @@ function updateMode(){
  $('modeHint').textContent=mode==='lecture'?'말과 칠판이 함께 진행되고 마지막에는 복습해요.':'선생님이 설명하며 질문하고, 답을 고를 때까지 기다려요.';
  $('playButton').textContent=mode==='lecture'?'▶ 강의 듣기':'▶ 함께 풀기 시작';
 } 
-// V3.25 unified classroom: the original question stays in the left panel.
+// V3.26 unified classroom: the original question stays in the left panel.
 // Only confirmed answer digits are filled in. All working lines accumulate on the right.
 function resultCells(p,view){
  const hot=activeProblemNumbers(p,{view,section:(cues[cursor]||{}).section||''});
@@ -652,7 +684,7 @@ function resultCells(p,view){
  <div class="line">${cell(p.kind==='add'?'+':'−','op','op')}${cell(p.B||'','bT')}${cell(p.y,'bO')}</div>
  <div class="rule"></div><div class="line"><div></div>${cell(tens,'rT','result '+(!view.tens?'blank':''))}${cell(ones,'rO','result '+(!view.ones?'blank':''))}</div>`;
 }
-// V3.25: Two permanently visible boxes for horizontal answers. A digit is
+// V3.26: Two permanently visible boxes for horizontal answers. A digit is
 // inserted only when that PLACE VALUE has actually been established.
 function answerBoxes(p,digits={}){
  const width=p.total>=10?2:1;
@@ -732,7 +764,7 @@ function markSchoolDigits(items,p){
  }
  return items;
 }
-// V3.25: consistent source-color connections across the original problem,
+// V3.26: consistent source-color connections across the original problem,
 // right-side working, interactive questions and spoken review. The colors
 // encode SOURCE, not the value of a digit: first operand, second operand,
 // and borrowed/carried ten retain their identity in every layout.
@@ -955,7 +987,7 @@ function setPace(s){store.settings.pauseMultiplier=({normal:1,slow:1.4,slower:2}
 function pauseLength(ms){return Math.round(ms*(store.settings.pauseMultiplier||1.4))}
 function makeUtterance(s){const u=new SpeechSynthesisUtterance(s);u.lang='ko-KR';u.rate=Number(store.settings.rate)||.83;u.pitch=1;u.volume=1;const selected=speechSynthesis.getVoices().find(v=>v.voiceURI===store.settings.voice);if(selected)u.voice=selected;return u}
 function splitAudio(text){
- // V3.25: Numbers immediately preceding '입니다' are spoken as their own
+ // V3.26: Numbers immediately preceding '입니다' are spoken as their own
  // utterance. Separating the TTS utterances is more reliable than a comma
  // or an inserted space on iPad Safari.
  const parts=[];
@@ -1063,7 +1095,7 @@ function answer(index){
   feedbackSpeech(hint,()=>{playerState='waiting';awaitingAnswer=true;practiceSettling=false;refreshPlayButton();});
  }
 }
-// V3.25 — completely independent answer-entry loop. No answer appears before submission.
+// V3.26 — completely independent answer-entry loop. No answer appears before submission.
 function chooseSoloDisplay(){
  const choice=store.settings.soloFormat||'horizontal';
  if(choice==='mixed'){
@@ -1089,7 +1121,7 @@ function startSolo(fresh=false){
  chooseSoloDisplay();updateMode();renderSolo();
  window.scrollTo({top:0,behavior:'instant'});
 }
-// V3.25: Each visible place is independently selectable. The ones column is
+// V3.26: Each visible place is independently selectable. The ones column is
 // initially selected, because vertical calculation usually begins there.
 // Numeric entry always writes to the selected place and can replace it.
 function soloWidth(){return current().total>=10?2:1;}
@@ -1154,7 +1186,7 @@ function renderSolo(){
  // The drawing layer persists when the math answer boxes are re-rendered.
  requestAnimationFrame(resizeMemoCanvas);
 }
-// V3.25 - the canvas keeps pen strokes separately from the fixed HTML problem.
+// V3.26 - the canvas keeps pen strokes separately from the fixed HTML problem.
 // Coordinates are normalized, so changing the iPad orientation preserves notes.
 const MEMO_COLORS={blue:'#2267da',red:'#dc3545',green:'#147a48'};
 function resetMemoForProblem(){
@@ -1168,6 +1200,9 @@ function memoPoint(ev){
 function memoDown(ev){
  if(mode!=='solo'||!memoState.enabled)return;
  if(ev.pointerType==='mouse'&&ev.button!==0)return;
+ if(ev.pointerType==='pen')memoLastPenAt=Date.now();
+ // A resting palm must never become a drawing pointer immediately after Pencil use.
+ if(ev.pointerType==='touch'&&Date.now()-memoLastPenAt<850)return;
  // Prefer Apple Pencil if a resting palm reached the glass first.
  if(memoState.pointerId!==null){
   if(ev.pointerType!=='pen'||memoState.activePointerType==='pen')return;
@@ -1193,6 +1228,7 @@ function memoSegment(ctx,a,b,tool,w,h){
 }
 function memoMove(ev){
  if(memoState.pointerId!==ev.pointerId||!memoState.active)return;
+ if(ev.pointerType==='pen')memoLastPenAt=Date.now();
  ev.preventDefault();
  const canvas=$('soloMemoCanvas'),ctx=canvas.getContext('2d');
  // Render only the latest segment, rather than rebuilding every past stroke
@@ -1209,6 +1245,7 @@ function memoMove(ev){
 }
 function memoUp(ev){
  if(memoState.pointerId!==ev.pointerId)return;
+ if(ev.pointerType==='pen')memoLastPenAt=Date.now();
  ev.preventDefault();
  if(memoState.active){
   const pt=memoPoint(ev),pts=memoState.active.pts;
@@ -1260,7 +1297,39 @@ function initMemo(){
  // Native iOS selection/callout and dragging must never take over the board.
  const board=$('soloWritingArea');
  for(const type of ['selectstart','dragstart','contextmenu'])board.addEventListener(type,e=>e.preventDefault());
+ // Safari can select the instructional text just below the drawing canvas.
+ // Suppress it across the practice workspace without disabling any buttons.
+ const workspace=$('soloPanel');
+ for(const type of ['selectstart','dragstart','contextmenu']){
+  workspace.addEventListener(type,e=>{
+   if(mode==='solo' && !e.target.closest('input,textarea,select'))e.preventDefault();
+  });
+ }
+ // A palm landing on a label or an unused part of the practice panel must not
+ // start page scrolling or native text selection during an active Pencil stroke.
+ const isControl=t=>!!(t&&t.closest&&t.closest('button,input,select,textarea,a'));
+ for(const type of ['touchstart','touchmove']){
+  workspace.addEventListener(type,e=>{
+   if(mode!=='solo'||!memoState.enabled||isControl(e.target))return;
+   if(memoState.activePointerType==='pen'||Date.now()-memoLastPenAt<850){
+    if(e.cancelable)e.preventDefault();
+   }
+  },{capture:true,passive:false});
+ }
+ // Deselect any native text selection that slipped through iPadOS gestures.
+ document.addEventListener('selectionchange',()=>{
+  if(mode!=='solo'||!workspace.isConnected)return;
+  const selection=window.getSelection&&window.getSelection();
+  if(!selection||selection.isCollapsed||!selection.rangeCount)return;
+  const node=selection.anchorNode;
+  if(node&&workspace.contains(node))selection.removeAllRanges();
+ });
  board.addEventListener('gesturestart',e=>e.preventDefault(),{passive:false});
+ // Some WebKit builds still send touch events after Pointer Events; disable
+ // their default gesture handling only on the canvas, not on answer slots.
+ for(const type of ['touchstart','touchmove']){
+  canvas.addEventListener(type,e=>{if(memoState.enabled&&e.cancelable)e.preventDefault();},{passive:false});
+ }
  window.addEventListener('blur',()=>{if(memoState.pointerId!==null)memoCancel({pointerId:memoState.pointerId});});
  document.addEventListener('visibilitychange',()=>{if(document.hidden&&memoState.pointerId!==null)memoCancel({pointerId:memoState.pointerId});});
  if('ResizeObserver' in window){memoResizeObserver=new ResizeObserver(()=>resizeMemoCanvas());memoResizeObserver.observe($('soloWritingArea'));}
