@@ -1,4 +1,4 @@
-Math Teacher V3.34 — GitHub Pages upload
-Upload ALL files from this folder into the same directory as index.html.
-New: fixed graph-paper alignment for one-/two-digit vertical arithmetic; always-visible choose-another-level button; version.json and cache-busted update check.
-Records remain in localStorage under math-teacher-v1; do not delete the installed app before backing up records.
+Math Teacher V3.35 — GitHub Pages upload
+Upload ALL files including version.json.
+Fixed one-digit vertical operator position and subtraction/addition rule extending to operator. Two-digit operator column also included by the answer rule.
+Existing math-teacher-v1 localStorage learning records are unchanged.

@@ -1,6 +1,6 @@
 {
   "app": "math-teacher",
-  "version": "3.34",
+  "version": "3.35",
   "release": "2026-11-26",
   "entry": "index.html"
 }
