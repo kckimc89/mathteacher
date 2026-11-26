@@ -1,4 +1,4 @@
-수학선생님 V3.33 — 학습판 방안선 칸 정렬 개선
-기존 V3.32에서 문제 숫자/답칸에 맞추어 격자 칸의 너비와 시작 위치를 연동합니다.
-정답 입력, 메모 필기, 기록 저장 방식은 유지합니다.
-GitHub Pages에 이 폴더 내용 전체를 업로드해 주세요.
+Math Teacher V3.34 — GitHub Pages upload
+Upload ALL files from this folder into the same directory as index.html.
+New: fixed graph-paper alignment for one-/two-digit vertical arithmetic; always-visible choose-another-level button; version.json and cache-busted update check.
+Records remain in localStorage under math-teacher-v1; do not delete the installed app before backing up records.
